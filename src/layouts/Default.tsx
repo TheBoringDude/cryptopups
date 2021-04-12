@@ -12,7 +12,7 @@ const DefaultLayout = ({ pageTitle, children }: LayoutProps) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <main>{children}</main>
+      <main className="bg-gray-900">{children}</main>
     </>
   );
 };

@@ -1,5 +1,8 @@
 import { ReactNode } from 'react';
-import DefaultLayout from './Default';
+
+import DefaultLayout from '@layouts/Default';
+import { Navigation } from '@components/nav';
+import { Footer } from '@components/footer';
 
 type BaseLayoutProps = {
   title: string;
@@ -10,12 +13,16 @@ export const BaseLayout = ({ title, children }: BaseLayoutProps) => {
   return (
     <DefaultLayout pageTitle={title}>
       {/* header section */}
-      <header></header>
+      <header>
+        <Navigation />
+      </header>
 
       {children}
 
       {/* footer section */}
-      <footer></footer>
+      <footer className="bg-gray-800 py-8">
+        <Footer />
+      </footer>
     </DefaultLayout>
   );
 };
