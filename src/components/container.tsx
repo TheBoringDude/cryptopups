@@ -9,5 +9,5 @@ type ContainerProps = {
 };
 
 export const Container = ({ layouts = 'w-11/12', children, className }: ContainerProps) => {
-  return <div className={`${layouts} mx-auto${className ? ` ${className}` : ''}`}>{children}</div>;
+  return <div className={`${layouts} mx-auto ${className ? `${className}` : ''}`}>{children}</div>;
 };
