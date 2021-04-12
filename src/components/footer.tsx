@@ -4,7 +4,7 @@ import { Container } from './container';
 
 export const Footer = () => {
   return (
-    <Container className="flex items-center justify-between">
+    <Container className="flex flex-col lg:flex-row items-center justify-between">
       <div>
         <Image src="/logo-min.png" height={20} width={120} />
       </div>
