@@ -2,8 +2,9 @@ import { useState } from 'react';
 
 import type { ArchiveStateProps } from '@lib/archive';
 import { ArchiveButtons } from '@lib/archive';
-import { ArchiveGallery } from './gallery';
 import { SlideColorsContext, usePupsTheme } from '@lib/theme';
+
+import { SetFirstEditionPups, SetSpecialsPups, SetFantasyPups, SetCelestialPups } from './sets';
 
 export const ArchiveTabHandler = () => {
   const [archives, setArchives] = useState<ArchiveStateProps>('first-edition');
@@ -32,7 +33,12 @@ export const ArchiveTabHandler = () => {
         ))}
       </ul>
 
-      <ArchiveGallery set={archives} />
+      <div>
+        {archives === 'first-edition' && <SetFirstEditionPups />}
+        {archives === 'specials' && <SetSpecialsPups />}
+        {archives === 'fantasy' && <SetFantasyPups />}
+        {archives === 'celestial' && <SetCelestialPups />}
+      </div>
     </>
   );
 };
