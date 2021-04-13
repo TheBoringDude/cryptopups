@@ -16,7 +16,7 @@ export const PupsThemeContext = createContext<PupsThemeModeContext>({
 });
 
 const PupsProvider = ({ children }: PupsThemeContextProps) => {
-  const [pupmode, setPupmode] = useState(null);
+  const [pupmode, setPupmode] = useState('rose');
 
   useEffect(() => {
     const mode = window.localStorage.getItem('pupmode');
