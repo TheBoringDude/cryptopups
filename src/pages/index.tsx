@@ -1,6 +1,7 @@
 import { ArchiveTabHandler } from '@components/archive/tabs';
 import { Container } from '@components/container';
 import { SlideShow } from '@components/slideshow';
+import { ThemeButton } from '@components/theme/buttons';
 import { BaseLayout } from '@layouts/base';
 import { socialIcons } from 'utils/socialMedia';
 
@@ -28,12 +29,9 @@ export default function Home() {
               >
                 Archive
               </button>
-              <button
-                className="m-2 py-4 rounded-lg px-8 bg-rose-600 hover:bg-rose-700 text-gray-100 text-xl font-bold tracking-wide"
-                title="See us @cryptokittens"
-              >
-                @cryptokittens
-              </button>
+              <ThemeButton className="m-2 py-4 rounded-lg px-8 text-gray-100 text-xl font-bold tracking-wide">
+                @cryptopups
+              </ThemeButton>
             </div>
           </div>
           <div className="col-span-1 sm:col-span-2">

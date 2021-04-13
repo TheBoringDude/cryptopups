@@ -3,9 +3,11 @@ import { useState } from 'react';
 import type { ArchiveStateProps } from '@lib/archive';
 import { ArchiveButtons } from '@lib/archive';
 import { ArchiveGallery } from './gallery';
+import { usePupsColor } from '@lib/theme';
 
 export const ArchiveTabHandler = () => {
   const [archives, setArchives] = useState<ArchiveStateProps>('first-edition');
+  const pupColor = usePupsColor();
 
   return (
     <>
@@ -17,8 +19,10 @@ export const ArchiveTabHandler = () => {
                 setArchives(button.key);
               }}
               className={`${
-                button.key == archives ? 'bg-rose-600' : 'bg-coolGray-600'
-              } py-1 md:py-2 px-6 md:px-8 text-gray-100 mx-2 rounded-lg font-bold tracking-wide hover:bg-rose-600`}
+                button.key == archives ? `${pupColor.button.base}` : 'bg-coolGray-600'
+              } py-1 md:py-2 px-6 md:px-8 text-gray-100 mx-2 rounded-lg font-bold tracking-wide ${
+                pupColor.button.hover
+              }`}
             >
               {button.title}
             </button>
