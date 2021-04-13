@@ -1,3 +1,7 @@
+/*
+  A simple container wrapper with custom spacings.
+*/
+
 import { ReactNode } from 'react';
 
 type ContainerLayouts = 'w-4/5' | 'w-5/6' | 'w-11/12' | 'w-full';

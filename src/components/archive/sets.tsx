@@ -1,3 +1,7 @@
+/*
+  Just a Wrapper to each pups groups.
+*/
+
 import { ArchiveGallery } from './gallery';
 
 export const SetFirstEditionPups = () => {

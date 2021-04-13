@@ -1,5 +1,10 @@
-import { SlideColorsContext, usePupsTheme } from '@lib/theme';
+/*
+  ThemeButton Wrapper to apply the theme from the coontext.
+*/
+
 import { ButtonHTMLAttributes, ReactNode } from 'react';
+
+import { SlideColorsContext, usePupsTheme } from '@lib/theme';
 
 interface ThemeButtonProps extends ButtonHTMLAttributes<HTMLElement> {
   children: ReactNode;

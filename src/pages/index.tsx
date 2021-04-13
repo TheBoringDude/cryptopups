@@ -1,3 +1,7 @@
+/*
+  This is the Index / Home page.
+*/
+
 import { ArchiveTabHandler } from '@components/archive/tabs';
 import { Container } from '@components/container';
 import { PupShow } from '@components/pupshow';

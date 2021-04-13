@@ -1,9 +1,3 @@
-/*
-TODO: Implement function
-
-For now, this is just a static image.
-*/
-
 import Image from 'next/image';
 
 import { SlideColorsContext, usePupsTheme } from '@lib/theme';

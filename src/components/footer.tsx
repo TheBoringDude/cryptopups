@@ -1,3 +1,7 @@
+/*
+  Main footer section.
+*/
+
 import Image from 'next/image';
 
 import { Container } from './container';

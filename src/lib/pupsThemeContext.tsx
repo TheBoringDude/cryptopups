@@ -1,4 +1,6 @@
 /*
+  ContextWrapper for the theme for pups
+  
     Default PupsTheme: `rose`
 */
 

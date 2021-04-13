@@ -1,4 +1,8 @@
 import Image from 'next/image';
+/*
+  Main navbar / menu section.
+*/
+
 import { Container } from './container';
 
 export const Navigation = () => {

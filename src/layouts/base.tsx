@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import DefaultLayout from '@layouts/Default';
+
 import { Navigation } from '@components/nav';
 import { Footer } from '@components/footer';
 
