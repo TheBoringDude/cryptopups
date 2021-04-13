@@ -3,11 +3,12 @@ import { useState } from 'react';
 import type { ArchiveStateProps } from '@lib/archive';
 import { ArchiveButtons } from '@lib/archive';
 import { ArchiveGallery } from './gallery';
-import { usePupsColor } from '@lib/theme';
+import { usePupsColor, usePupsTheme } from '@lib/theme';
 
 export const ArchiveTabHandler = () => {
   const [archives, setArchives] = useState<ArchiveStateProps>('first-edition');
-  const pupColor = usePupsColor();
+  const { pupmode } = usePupsTheme();
+  const pupColor = usePupsColor(pupmode);
 
   return (
     <>

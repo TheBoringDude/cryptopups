@@ -20,12 +20,7 @@ const PupsProvider = ({ children }: PupsThemeContextProps) => {
 
   useEffect(() => {
     const mode = window.localStorage.getItem('pupmode');
-    if (!mode) {
-      setPupmode('rose');
-    }
-    setPupmode(mode);
-
-    console.log(pupmode);
+    setPupmode(mode ? mode : 'rose');
   }, []);
 
   const toggle = (mode: string) => {

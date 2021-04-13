@@ -11,8 +11,6 @@ import { SlideColorsContext, usePupsTheme } from '@lib/theme';
 export const PupShow = () => {
   const { pupmode, togglePupMode } = usePupsTheme();
 
-  console.log(pupmode);
-
   if (!pupmode) return null;
 
   return (
