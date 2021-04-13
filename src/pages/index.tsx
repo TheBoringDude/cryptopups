@@ -1,6 +1,6 @@
 import { ArchiveTabHandler } from '@components/archive/tabs';
 import { Container } from '@components/container';
-import { SlideShow } from '@components/slideshow';
+import { PupShow } from '@components/pupshow';
 import { ThemeButton } from '@components/theme/buttons';
 import { BaseLayout } from '@layouts/base';
 import { socialIcons } from 'utils/socialMedia';
@@ -35,7 +35,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-1 sm:col-span-2">
-            <SlideShow />
+            <PupShow />
           </div>
         </section>
       </Container>

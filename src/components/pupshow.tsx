@@ -8,8 +8,10 @@ import Image from 'next/image';
 
 import { SlideColorsContext, usePupsTheme } from '@lib/theme';
 
-export const SlideShow = () => {
+export const PupShow = () => {
   const { pupmode, togglePupMode } = usePupsTheme();
+
+  if (!pupmode) return null;
 
   return (
     <div className="relative">
