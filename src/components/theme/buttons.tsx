@@ -1,4 +1,4 @@
-import { usePupsColor } from '@lib/theme';
+import { usePupsColor, usePupsTheme } from '@lib/theme';
 import { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
 
 interface ThemeButtonProps extends ButtonHTMLAttributes<HTMLElement> {
@@ -6,7 +6,8 @@ interface ThemeButtonProps extends ButtonHTMLAttributes<HTMLElement> {
 }
 
 export const ThemeButton = (props: ThemeButtonProps) => {
-  const pupColor = usePupsColor();
+  const { pupmode } = usePupsTheme();
+  const pupColor = usePupsColor(pupmode);
 
   return (
     <button

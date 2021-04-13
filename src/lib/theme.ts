@@ -73,9 +73,7 @@ export const usePupsTheme = () => {
   return context;
 };
 
-export const usePupsColor = (): SlideColorsProps => {
-  const { pupmode } = usePupsTheme();
-
+export const usePupsColor = (pupmode: string): SlideColorsProps => {
   // return a blank if not yet loaded
   if (!pupmode) {
     return <SlideColorsProps>{ name: '', button: { base: '', hover: '' }, color: '' };
