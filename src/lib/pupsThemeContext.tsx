@@ -24,6 +24,8 @@ const PupsProvider = ({ children }: PupsThemeContextProps) => {
       setPupmode('rose');
     }
     setPupmode(mode);
+
+    console.log(pupmode);
   }, []);
 
   const toggle = (mode: string) => {
