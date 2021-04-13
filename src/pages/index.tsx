@@ -1,6 +1,8 @@
+import { ArchiveTabHandler } from '@components/archive/tabs';
 import { Container } from '@components/container';
 import { SlideShow } from '@components/slideshow';
 import { BaseLayout } from '@layouts/base';
+import { socialIcons } from 'utils/socialMedia';
 
 export default function Home() {
   return (
@@ -41,7 +43,36 @@ export default function Home() {
       </Container>
 
       {/* TODO: add social icons in this section */}
-      <section></section>
+      <section className="bg-gray-800 py-8 text-center">
+        <h3 className="text-2xl text-gray-100 mb-3">visit us at our social media pages</h3>
+        <ul className="inline-flex items-center justify-center">
+          {socialIcons.map((social, index) => (
+            <li key={index} className="mx-1">
+              <a className="group text-sm" href={social.link}>
+                <img
+                  className="h-12 w-12 transform group-hover:scale-110 ease-in-out duration-300"
+                  src={social.src}
+                  alt={`social ${social.name}`}
+                />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="py-12">
+        <Container className="text-center">
+          <h2 className="text-center font-black text-white text-5xl">Pups! Archive</h2>
+          <ArchiveTabHandler />
+        </Container>
+        {/* PS: I do not to refactor this ;-) */}
+        <div
+          className="text-white text-center"
+          dangerouslySetInnerHTML={{
+            __html: `<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://www.cryptopups.cf/">Cryptopups</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.instagram.com/apppllleee_pie/">Adrich Laceste</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"></a></p>`
+          }}
+        ></div>
+      </section>
     </BaseLayout>
   );
 }

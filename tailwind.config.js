@@ -11,7 +11,9 @@ module.exports = {
     fontFamily: {
       sans: ['"Nunito"', 'sans-serif']
     },
-    extend: {}
+    extend: {
+      scale: ['group-hover']
+    }
   },
   variants: {
     extend: {}
