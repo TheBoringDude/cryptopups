@@ -9,7 +9,7 @@ type ArchiveGalleryProps = {
 export const ArchiveGallery = ({ set }: ArchiveGalleryProps) => {
   return (
     <>
-      <section className="grid grid-cols-4 gap-4 py-8">
+      <section className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-2 sm:gap-4 py-8">
         {ArchiveImages[set].map((image, index) => (
           <div key={index}>
             <Image
