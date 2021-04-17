@@ -2,8 +2,7 @@ import { BaseLayout } from '@layouts/base';
 
 import { Container } from '@components/container';
 import { SlideColorsContext, usePupsTheme } from '@lib/theme';
-import { LinkButton } from '@components/LinkButton';
-import { ThemeButton } from '@components/theme/buttons';
+import { ThemeLinkButton } from '@components/theme/buttons';
 
 const SampleBlogContent = {
   title: 'Hello World',
@@ -33,7 +32,14 @@ const BlogPage = () => {
               </h3>
               <div className="px-6 my-3">
                 <p className="text-gray-300 text-lg py-2">{blog.excerpt}</p>
-                <ThemeButton className="py-2 px-6 rounded-lg text-white">Read More</ThemeButton>
+                <div className="mt-2 mb-6">
+                  <ThemeLinkButton
+                    href="/blog/hello-world"
+                    className="py-2 px-6 rounded-lg text-white"
+                  >
+                    Read More
+                  </ThemeLinkButton>
+                </div>
               </div>
               <div className="py-2 px-4 flex items-center justify-between bg-coolGray-700 rounded-b-md">
                 <h4 className="text-gray-200 hover:underline">@{blog.author}</h4>

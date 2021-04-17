@@ -18,3 +18,5 @@ export const LinkButton = ({ href, className, children }: LinkButtonProps) => {
     </Link>
   );
 };
+
+export type { LinkButtonProps };
