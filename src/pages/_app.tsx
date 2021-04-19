@@ -6,7 +6,7 @@ import '../styles/tailwind.css';
 export default function CryptoPups({ Component, pageProps }: AppProps) {
   return (
     <PupsProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </PupsProvider>
   );
 }
