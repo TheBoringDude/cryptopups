@@ -1,10 +1,20 @@
 import { useContext } from 'react';
 import { PupsThemeContext } from './pupsThemeContext';
 
-export type PupsModeColors = 'blue' | 'green' | 'purple' | 'white' | 'yellow' | 'orange' | 'rose';
-type SlideColorsProps = { color: string; button: { base: string; hover: string }; name: string };
+type PupsModeColors = 'blue' | 'green' | 'purple' | 'white' | 'yellow' | 'orange' | 'rose';
 
-export const SlideColorsContext = {
+type SlidePupColorProps = {
+  color: string;
+  text: string;
+  textHover: string;
+  button: {
+    base: string;
+    hover: string;
+  };
+  name: PupsModeColors;
+};
+
+const SlideColorsContext = {
   blue: {
     color: 'bg-blue-500',
     text: 'text-blue-500',
@@ -77,7 +87,7 @@ export const SlideColorsContext = {
   }
 };
 
-export const usePupsTheme = () => {
+const usePupsTheme = () => {
   const context = useContext(PupsThemeContext);
 
   if (context === undefined) {
@@ -86,3 +96,12 @@ export const usePupsTheme = () => {
 
   return context;
 };
+
+const usePupsColor = (): SlidePupColorProps => {
+  const { pupmode } = usePupsTheme();
+
+  return SlideColorsContext[pupmode];
+};
+
+export { usePupsColor, usePupsTheme, SlideColorsContext };
+export type { SlidePupColorProps };

@@ -6,13 +6,13 @@ import { useState } from 'react';
 
 import type { ArchiveStateProps } from '@lib/archive';
 import { ArchiveButtons } from '@lib/archive';
-import { SlideColorsContext, usePupsTheme } from '@lib/theme';
+import { SlideColorsContext, usePupsColor, usePupsTheme } from '@lib/theme';
 
 import { SetFirstEditionPups, SetSpecialsPups, SetFantasyPups, SetCelestialPups } from './sets';
 
 export const ArchiveTabHandler = () => {
   const [archives, setArchives] = useState<ArchiveStateProps>('first-edition');
-  const { pupmode } = usePupsTheme();
+  const pupmode = usePupsColor();
 
   return (
     <>
@@ -24,11 +24,9 @@ export const ArchiveTabHandler = () => {
                 setArchives(button.key);
               }}
               className={`${
-                button.key == archives
-                  ? `${SlideColorsContext[pupmode]?.button.base}`
-                  : 'bg-coolGray-600'
+                button.key == archives ? `${pupmode.button.base}` : 'bg-coolGray-600'
               } py-1 md:py-2 px-6 md:px-8 text-gray-100 mx-2 rounded-lg font-bold tracking-wide ${
-                SlideColorsContext[pupmode]?.button.hover
+                pupmode.button.hover
               }`}
             >
               {button.title}

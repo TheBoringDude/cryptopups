@@ -1,6 +1,6 @@
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { SlideColorsContext, usePupsTheme } from '@lib/theme';
+import { usePupsColor } from '@lib/theme';
 
 const socialLinks = [
   {
@@ -21,7 +21,7 @@ const socialLinks = [
 ];
 
 export const SocialSection = () => {
-  const { pupmode } = usePupsTheme();
+  const pupmode = usePupsColor();
 
   return (
     <section className="bg-gray-800 py-8 text-center">
@@ -29,10 +29,7 @@ export const SocialSection = () => {
       <ul className="inline-flex items-center justify-center">
         {socialLinks.map((social, index) => (
           <li key={index} className="mx-1">
-            <a
-              className={`group text-4xl ${SlideColorsContext[pupmode].text} ${SlideColorsContext[pupmode].textHover}`}
-              href={social.href}
-            >
+            <a className={`group text-4xl ${pupmode.text} ${pupmode.textHover}`} href={social.href}>
               <FontAwesomeIcon
                 icon={social.icon}
                 className="transform group-hover:scale-110 duration-500"

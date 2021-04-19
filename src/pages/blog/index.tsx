@@ -1,7 +1,7 @@
 import { BaseLayout } from '@layouts/base';
 
 import { Container } from '@components/container';
-import { SlideColorsContext, usePupsTheme } from '@lib/theme';
+import { usePupsColor } from '@lib/theme';
 import { ThemeLinkButton } from '@components/theme/buttons';
 
 const SampleBlogContent = {
@@ -15,7 +15,7 @@ const SampleBlogContent = {
 const blog = SampleBlogContent;
 
 const BlogPage = () => {
-  const { pupmode } = usePupsTheme();
+  const pupmode = usePupsColor();
 
   return (
     <BaseLayout title="Blog | cryptopups!">
@@ -25,9 +25,7 @@ const BlogPage = () => {
 
           <section className="my-8 w-2/3 mx-auto">
             <div className="bg-coolGray-800 rounded-md">
-              <h3
-                className={`${SlideColorsContext[pupmode].color} text-2xl text-white py-2 pl-4 rounded-t-md`}
-              >
+              <h3 className={`${pupmode.color} text-2xl text-white py-2 pl-4 rounded-t-md`}>
                 {blog.title}
               </h3>
               <div className="px-6 my-3">
