@@ -5,6 +5,7 @@
 import { ArchiveTabHandler } from '@components/archive/tabs';
 import { Container } from '@components/container';
 import { PupShow } from '@components/pupshow';
+import { SocialSection } from '@components/social';
 import { ThemeButton } from '@components/theme/buttons';
 import { BaseLayout } from '@layouts/base';
 import { socialIcons } from 'utils/socialMedia';
@@ -45,22 +46,7 @@ export default function Home() {
       </Container>
 
       {/* TODO: add social icons in this section */}
-      <section className="bg-gray-800 py-8 text-center">
-        <h3 className="text-2xl text-gray-100 mb-3">visit us at our social media pages</h3>
-        <ul className="inline-flex items-center justify-center">
-          {socialIcons.map((social, index) => (
-            <li key={index} className="mx-1">
-              <a className="group text-sm" href={social.link}>
-                <img
-                  className="h-12 w-12 transform group-hover:scale-110 ease-in-out duration-300"
-                  src={social.src}
-                  alt={`social ${social.name}`}
-                />
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <SocialSection />
 
       <section className="py-12">
         <Container className="text-center">

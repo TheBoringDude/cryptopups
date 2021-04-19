@@ -2,7 +2,7 @@
   ThemeButton Wrapper to apply the theme from the coontext.
 */
 
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react';
 
 import { SlideColorsContext, usePupsTheme } from '@lib/theme';
 import { LinkButton, LinkButtonProps } from '@components/LinkButton';
