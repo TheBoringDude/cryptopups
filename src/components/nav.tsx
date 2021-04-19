@@ -16,7 +16,7 @@ export const Navigation = () => {
             <a href="#">Gallery</a>
           </li>
           <li className="ml-8">
-            <a href="#">Facebook</a>
+            <a href="/blog">Blog</a>
           </li>
         </ul>
       </nav>
