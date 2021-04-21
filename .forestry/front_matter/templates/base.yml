@@ -18,3 +18,5 @@ fields:
       format: markdown
   label: Excerpt
   description: Short version of the blog content
+pages:
+- blog/sample-blog.md
