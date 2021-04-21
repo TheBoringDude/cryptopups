@@ -1,3 +1,7 @@
+/*
+This DIR is based from: :https://github.com/forestryio/next-blog-forestry/tree/master/lib
+*/
+
 import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
@@ -10,7 +14,8 @@ const getBlogsFileSlugs = () => {
 };
 
 const getBlogBySlug = (slug: string): BlogDataProps => {
-  const blogPath = join(blogDir, `${slug}.md`);
+  const realSlug = slug.replace(/\.md$/, '');
+  const blogPath = join(blogDir, `${realSlug}.md`);
 
   // check if the blog slug exists
   if (!fs.existsSync(blogPath)) {
@@ -24,7 +29,7 @@ const getBlogBySlug = (slug: string): BlogDataProps => {
   return {
     isExists: true,
     data: {
-      slug: slug,
+      slug: realSlug,
       date: data.date,
       title: data.title,
       excerpt: data.excerpt,
@@ -33,4 +38,17 @@ const getBlogBySlug = (slug: string): BlogDataProps => {
   };
 };
 
-export { getBlogBySlug };
+// based from https://stackoverflow.com/questions/40248643/typescript-sort-by-date-not-working
+const getTime = (date: string | null) => {
+  return new Date(date).getTime();
+};
+const getAllBlogs = () => {
+  const slugs = getBlogsFileSlugs();
+  const blogs = slugs
+    .map((slug) => getBlogBySlug(slug))
+    .sort((a, b) => getTime(b.data.date) - getTime(a.data.date));
+
+  return blogs;
+};
+
+export { getBlogBySlug, getAllBlogs };
