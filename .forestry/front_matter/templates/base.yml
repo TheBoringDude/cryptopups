@@ -18,5 +18,16 @@ fields:
       format: markdown
   label: Excerpt
   description: Short version of the blog content
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  hidden: true
+  default: now
 pages:
 - blog/sample-blog.md
