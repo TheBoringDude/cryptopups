@@ -11,7 +11,7 @@ interface ThemeButtonProps extends ButtonHTMLAttributes<HTMLElement> {
   children: ReactNode;
 }
 
-export const ThemeButton = (props: ThemeButtonProps) => {
+const ThemeButton = (props: ThemeButtonProps) => {
   const pupmode = usePupsColor();
 
   return (
@@ -24,15 +24,17 @@ export const ThemeButton = (props: ThemeButtonProps) => {
   );
 };
 
-export const ThemeLinkButton = ({ href, className, children }: LinkButtonProps) => {
+const ThemeLinkButton = (props: LinkButtonProps) => {
   const pupmode = usePupsColor();
 
   return (
     <LinkButton
-      href={href}
-      className={`${pupmode.button.base} ${pupmode.button.hover} ${className}`}
+      href={props.href}
+      className={`${pupmode.button.base} ${pupmode.button.hover} ${props.className}`}
     >
-      {children}
+      {props.children}
     </LinkButton>
   );
 };
+
+export { ThemeButton, ThemeLinkButton };

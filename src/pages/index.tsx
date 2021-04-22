@@ -6,9 +6,9 @@ import { ArchiveTabHandler } from '@components/archive/tabs';
 import { Container } from '@components/container';
 import { PupShow } from '@components/pupshow';
 import { SocialSection } from '@components/social';
-import { ThemeButton } from '@components/theme/buttons';
+import { ThemeAnchorButton } from '@components/theme/anchor';
 import { BaseLayout } from '@layouts/base';
-import { socialIcons } from 'utils/socialMedia';
+import { TELEGRAM_LINK } from 'utils/socialMedia';
 
 export default function Home() {
   return (
@@ -34,9 +34,14 @@ export default function Home() {
               >
                 Archive
               </button>
-              <ThemeButton className="m-2 py-4 rounded-lg px-8 text-gray-100 text-xl font-bold tracking-wide">
-                @cryptopups
-              </ThemeButton>
+              <ThemeAnchorButton
+                href={TELEGRAM_LINK.link}
+                title="Join Telegram Clubhouse"
+                className="m-2 py-4 rounded-lg px-8 text-gray-100 text-xl font-bold tracking-wide inline-flex items-center"
+              >
+                <span className="text-3xl mr-2">{TELEGRAM_LINK.icon}</span>
+                clubhouse
+              </ThemeAnchorButton>
             </div>
           </div>
           <div className="col-span-1 sm:col-span-2">
