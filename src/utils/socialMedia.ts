@@ -2,16 +2,16 @@ export const socialIcons = [
   {
     name: 'facebook',
     src: '/icons/facebook.svg',
-    link: ''
+    link: 'https://web.facebook.com/therealcryptopups'
   },
   {
     name: 'twitter',
     src: '/icons/twitter.svg',
-    link: ''
+    link: 'https://twitter.com/apppllleee_pie'
   },
   {
     name: 'instagram',
     src: '/icons/instagram.svg',
-    link: ''
+    link: 'https://www.instagram.com/apppllleee_pie/'
   }
 ];
