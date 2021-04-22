@@ -27,14 +27,11 @@ const getBlogBySlug = (slug: string): BlogDataProps => {
   const { data, content } = matter(contents);
 
   return {
-    isExists: true,
-    data: {
-      slug: realSlug,
-      date: data.date,
-      title: data.title,
-      excerpt: data.excerpt,
-      content: content
-    }
+    slug: realSlug,
+    date: data.date,
+    title: data.title,
+    excerpt: data.excerpt,
+    content: content
   };
 };
 
@@ -46,7 +43,7 @@ const getAllBlogs = () => {
   const slugs = getBlogsFileSlugs();
   const blogs = slugs
     .map((slug) => getBlogBySlug(slug))
-    .sort((a, b) => getTime(b.data.date) - getTime(a.data.date));
+    .sort((a, b) => getTime(b.date) - getTime(a.date));
 
   return blogs;
 };
