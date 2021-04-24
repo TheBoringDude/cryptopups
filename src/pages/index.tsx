@@ -4,6 +4,7 @@
 
 import { ArchiveTabHandler } from '@components/archive/tabs';
 import { Container } from '@components/container';
+import { EventsSection } from '@components/events';
 import { PupShow } from '@components/pupshow';
 import { SocialSection } from '@components/social';
 import { ThemeAnchorButton } from '@components/theme/anchor';
@@ -14,7 +15,8 @@ export default function Home() {
   return (
     <BaseLayout title="cryptopups! | Welcome">
       {/* showcase header */}
-      <Container className="py-16 px-4 md:px-8">
+      <Container className="py-8 px-4 md:px-8">
+        <EventsSection />
         <section className="grid grid-cols-1 sm:grid-cols-5 items-center">
           <div className="col-span-1 sm:col-span-3">
             <h1 className="text-center sm:text-left text-5xl sm:text-6xl lg:text-7xl font-black text-white">
