@@ -6,6 +6,7 @@ import { ThemeLinkButton } from '@components/theme/buttons';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { getAllBlogs } from '@lib/blog/blogs';
 import { BlogDataProps } from '@lib/blog/types';
+import { json } from 'utils/json';
 
 type AllBlogStaticProps = {
   blogs: BlogDataProps[];
@@ -15,7 +16,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const allBlogs = getAllBlogs();
 
   return {
-    props: { blogs: allBlogs }
+    props: { blogs: json<BlogDataProps[]>(allBlogs) }
   };
 };
 
