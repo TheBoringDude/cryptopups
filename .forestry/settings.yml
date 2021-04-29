@@ -4,15 +4,18 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: document
+- type: directory
   path: _events
   label: Events
+  create: all
   match: "**/*"
 - type: directory
-  path: blog
+  path: _blog
   label: Blog
   create: all
   match: "**/*"
+  templates:
+  - base
 upload_dir: public/blog/media
 public_path: "/blog/media"
 front_matter_path: ''
