@@ -1,6 +1,6 @@
 import { BlogLayout } from '@layouts/blog';
 import { getAllBlogs, getBlogBySlug } from '@lib/blog/blogs';
-import { markdownToHtml } from '@lib/blog/markdown';
+import { markdownToHtml } from '@lib/markdown';
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 
 const array_string = (arr: string[] | string) => {

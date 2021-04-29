@@ -9,14 +9,30 @@ import { PupShow } from '@components/pupshow';
 import { SocialSection } from '@components/social';
 import { ThemeAnchorButton } from '@components/theme/anchor';
 import { BaseLayout } from '@layouts/base';
+import { getLatestEvent } from '@lib/events/events';
+import { EventProps } from '@lib/events/types';
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { TELEGRAM_LINK } from 'utils/socialMedia';
 
-export default function Home() {
+export const getStaticProps: GetStaticProps = async () => {
+  const event = getLatestEvent();
+
+  return {
+    // I am having issues with the date one so, ..
+    props: { event: JSON.parse(JSON.stringify(event)) }
+  };
+};
+
+type HomeProps = {
+  event: EventProps;
+};
+
+export default function Home({ event }: HomeProps) {
   return (
     <BaseLayout title="cryptopups! | Welcome">
       {/* showcase header */}
       <Container className="py-8 px-4 md:px-8">
-        <EventsSection />
+        <EventsSection event={event} />
         <section className="grid grid-cols-1 sm:grid-cols-5 items-center">
           <div className="col-span-1 sm:col-span-3">
             <h1 className="text-center sm:text-left text-5xl sm:text-6xl lg:text-7xl font-black text-white">

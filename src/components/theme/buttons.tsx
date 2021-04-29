@@ -37,4 +37,17 @@ const ThemeLinkButton = (props: LinkButtonProps) => {
   );
 };
 
-export { ThemeButton, ThemeLinkButton };
+const ThemeTextButton = (props: LinkButtonProps) => {
+  const pupmode = usePupsColor();
+
+  return (
+    <LinkButton
+      href={props.href}
+      className={`${pupmode.text} ${pupmode.textHover} ${props.className}`}
+    >
+      {props.children}
+    </LinkButton>
+  );
+};
+
+export { ThemeButton, ThemeLinkButton, ThemeTextButton };
