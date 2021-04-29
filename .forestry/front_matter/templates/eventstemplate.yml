@@ -16,5 +16,16 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+- name: post_date
+  type: datetime
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Post Date
+  default: now
+  hidden: true
 pages:
 - _events/giveaway-mint-2-10.md
