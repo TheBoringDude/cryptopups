@@ -29,3 +29,5 @@ fields:
     display_utc: false
   hidden: true
   default: now
+pages:
+- _blog/mint-2-10-giveaway-winners.md
