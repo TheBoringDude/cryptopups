@@ -7,7 +7,7 @@ import matter from 'gray-matter';
 import { join } from 'path';
 import { BlogDataProps } from './types';
 
-const blogDir = join(process.cwd(), 'blog');
+const blogDir = join(process.cwd(), '_blog');
 
 const getBlogsFileSlugs = () => {
   return fs.readdirSync(blogDir);
