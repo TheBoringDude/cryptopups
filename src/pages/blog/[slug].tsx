@@ -1,7 +1,9 @@
 import { BlogLayout } from '@layouts/blog';
 import { getAllBlogs, getBlogBySlug } from '@lib/blog/blogs';
+import { BlogDataProps } from '@lib/blog/types';
 import { markdownToHtml } from '@lib/markdown';
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
+import { json } from 'utils/json';
 
 const array_string = (arr: string[] | string) => {
   return Array.isArray(arr) ? arr.join() : arr;
@@ -14,7 +16,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      ...post,
+      blog: json<BlogDataProps>(post),
       content
     }
   };
@@ -35,8 +37,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-const BlogManager = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
-  return <BlogLayout title={props.title} date={props.date} content={props.content}></BlogLayout>;
+type BlogManagerProps = {
+  blog: BlogDataProps;
+  content: string;
+};
+
+const BlogManager = (props: BlogManagerProps) => {
+  return (
+    <BlogLayout
+      title={props.blog.title}
+      date={props.blog.date}
+      content={props.content}
+    ></BlogLayout>
+  );
 };
 
 export default BlogManager;

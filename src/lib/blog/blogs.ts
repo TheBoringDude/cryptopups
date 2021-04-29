@@ -17,12 +17,6 @@ const getBlogBySlug = (slug: string): BlogDataProps => {
   const realSlug = slug.replace(/\.md$/, '');
   const blogPath = join(blogDir, `${realSlug}.md`);
 
-  // check if the blog slug exists
-  if (!fs.existsSync(blogPath)) {
-    // file doesn't exist
-    // TODO::
-  }
-
   const contents = fs.readFileSync(blogPath, 'utf8');
   const { data, content } = matter(contents);
 

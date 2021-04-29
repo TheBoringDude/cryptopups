@@ -3,7 +3,7 @@ interface BlogDataProps {
   title: string;
   excerpt: string;
   date: string;
-  content: string;
+  content?: string;
 }
 
 export type { BlogDataProps };

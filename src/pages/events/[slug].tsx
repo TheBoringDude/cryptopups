@@ -6,6 +6,7 @@ import { EventProps } from '@lib/events/types';
 import { markdownToHtml } from '@lib/markdown';
 import { usePupsColor } from '@lib/theme';
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
+import { json } from 'utils/json';
 
 const array_string = (arr: string[] | string) => {
   return Array.isArray(arr) ? arr.join() : arr;
@@ -13,13 +14,12 @@ const array_string = (arr: string[] | string) => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const event = getEventBySlug(array_string(context.params.slug));
-  console.log(event);
 
   const content = await markdownToHtml(event.content || '');
 
   return {
     props: {
-      event: JSON.parse(JSON.stringify(event)),
+      event: json<EventProps>(event),
       content
     }
   };
