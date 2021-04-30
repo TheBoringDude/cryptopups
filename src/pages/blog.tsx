@@ -33,9 +33,14 @@ const BlogPage = ({ blogs }: AllBlogStaticProps) => {
 
           <section className="my-8 w-2/3 mx-auto">
             {blogs.map((blog, index) => (
-              <div key={index} className="bg-coolGray-800 rounded-md">
+              <div
+                key={index}
+                className="bg-coolGray-700 dark:bg-coolGray-800 rounded-lg shadow-lg border dark:border-gray-800"
+              >
                 <h3
-                  className={`${pupmode.color} text-3xl text-gray-100 font-extrabold py-3 pl-4 rounded-t-md`}
+                  className={`${pupmode.color} text-3xl ${
+                    pupmode.color === 'bg-white' ? 'text-gray-700' : 'text-gray-100'
+                  } font-extrabold py-3 pl-4 rounded-t-md`}
                 >
                   {blog.title}
                 </h3>
@@ -50,8 +55,10 @@ const BlogPage = ({ blogs }: AllBlogStaticProps) => {
                     </ThemeLinkButton>
                   </div>
                 </div>
-                <div className="py-2 px-4 bg-coolGray-700 rounded-b-md text-right text-sm">
-                  <p className="text-gray-400">{new Date(blog.date).toUTCString()}</p>
+                <div className="py-2 px-4 bg-coolGray-400 dark:bg-coolGray-700 rounded-b-md text-right text-sm">
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {new Date(blog.date).toUTCString()}
+                  </p>
                 </div>
               </div>
             ))}
