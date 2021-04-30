@@ -12,7 +12,7 @@ import { BaseLayout } from '@layouts/base';
 import { getLatestEvent } from '@lib/events/events';
 import { EventProps } from '@lib/events/types';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import { TELEGRAM_LINK } from 'utils/socialMedia';
+import { TELEGRAM_LINK } from '@utils/socialMedia';
 
 export const getStaticProps: GetStaticProps = async () => {
   const event = getLatestEvent();

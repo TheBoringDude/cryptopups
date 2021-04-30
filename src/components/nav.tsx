@@ -1,19 +1,12 @@
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useTheme } from '@lib/theme';
-import Image from 'next/image';
 /*
   Main navbar / menu section.
 */
 
+import Image from 'next/image';
 import { Container } from './container';
-import { ThemeButton } from './theme/buttons';
+import { ToggleThemeButton } from './toggle-theme';
 
 export const Navigation = () => {
-  const { theme, toggleTheme } = useTheme();
-
-  const isDark = theme === 'dark';
-
   return (
     <Container>
       <nav className="py-4 flex items-center justify-between">
@@ -27,9 +20,7 @@ export const Navigation = () => {
             <a href="/blog">Blog</a>
           </li>
           <li className="ml-8">
-            <ThemeButton onClick={toggleTheme} className="px-3 py-2 rounded-full">
-              <FontAwesomeIcon icon={isDark ? faSun : faMoon} size="lg" />
-            </ThemeButton>
+            <ToggleThemeButton />
           </li>
         </ul>
       </nav>

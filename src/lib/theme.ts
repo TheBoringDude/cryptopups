@@ -50,7 +50,7 @@ const SlideColorsContext = {
     prose: 'prose-purple'
   },
   white: {
-    color: 'bg-white',
+    color: 'bg-coolGray-700',
     text: 'text-coolGray-700 dark:text-white',
     textHover: 'hover:underline',
     button: {

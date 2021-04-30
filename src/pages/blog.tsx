@@ -6,7 +6,7 @@ import { ThemeLinkButton } from '@components/theme/buttons';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { getAllBlogs } from '@lib/blog/blogs';
 import { BlogDataProps } from '@lib/blog/types';
-import { json } from 'utils/json';
+import { json } from '@utils/json';
 
 type AllBlogStaticProps = {
   blogs: BlogDataProps[];
@@ -35,7 +35,7 @@ const BlogPage = ({ blogs }: AllBlogStaticProps) => {
             {blogs.map((blog, index) => (
               <div key={index} className="bg-coolGray-800 rounded-md">
                 <h3
-                  className={`${pupmode.color} text-2xl text-gray-100 font-extrabold py-2 pl-4 rounded-t-md`}
+                  className={`${pupmode.color} text-3xl text-gray-100 font-extrabold py-3 pl-4 rounded-t-md`}
                 >
                   {blog.title}
                 </h3>

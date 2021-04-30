@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { usePupsColor } from '@lib/theme';
-import { socialIcons } from 'utils/socialMedia';
+import { socialIcons } from '@utils/socialMedia';
 import { ThemeAnchorText } from './theme/anchor';
 
 export const SocialSection = () => {
