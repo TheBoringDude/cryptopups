@@ -12,6 +12,7 @@ type SlidePupColorProps = {
     hover: string;
   };
   name: PupsModeColors;
+  prose: string;
 };
 
 const SlideColorsContext = {
@@ -23,7 +24,8 @@ const SlideColorsContext = {
       base: 'bg-blue-500',
       hover: 'hover:bg-blue-600'
     },
-    name: 'blue'
+    name: 'blue',
+    prose: 'prose-blue'
   },
   green: {
     color: 'bg-green-500',
@@ -33,7 +35,8 @@ const SlideColorsContext = {
       base: 'bg-green-500',
       hover: 'hover:bg-green-600'
     },
-    name: 'green'
+    name: 'green',
+    prose: 'prose-green'
   },
   purple: {
     color: 'bg-purple-500',
@@ -43,17 +46,19 @@ const SlideColorsContext = {
       base: 'bg-purple-500',
       hover: 'hover:bg-purple-600'
     },
-    name: 'purple'
+    name: 'purple',
+    prose: 'prose-purple'
   },
   white: {
-    color: 'bg-white',
-    text: 'text-white',
+    color: 'bg-coolGray-700',
+    text: 'text-coolGray-700 dark:text-white',
     textHover: 'hover:underline',
     button: {
       base: 'text-black bg-white',
       hover: 'hover:bg-gray-100 hover:text-black'
     },
-    name: 'white'
+    name: 'white',
+    prose: 'prose-black'
   },
   yellow: {
     color: 'bg-yellow-500',
@@ -63,7 +68,8 @@ const SlideColorsContext = {
       base: 'bg-yellow-500',
       hover: 'hover:bg-yellow-600'
     },
-    name: 'yellow'
+    name: 'yellow',
+    prose: 'prose-yellow'
   },
   orange: {
     color: 'bg-orange-500',
@@ -73,7 +79,8 @@ const SlideColorsContext = {
       base: 'bg-orange-500',
       hover: 'hover:bg-orange-600'
     },
-    name: 'orange'
+    name: 'orange',
+    prose: 'prose-orange'
   },
   rose: {
     color: 'bg-rose-500',
@@ -83,7 +90,8 @@ const SlideColorsContext = {
       base: 'bg-rose-500',
       hover: 'hover:bg-rose-600'
     },
-    name: 'rose'
+    name: 'rose',
+    prose: 'prose-rose'
   }
 };
 
@@ -103,5 +111,11 @@ const usePupsColor = (): SlidePupColorProps => {
   return SlideColorsContext[pupmode];
 };
 
-export { usePupsColor, usePupsTheme, SlideColorsContext };
+const useTheme = () => {
+  const { theme, toggleTheme } = usePupsTheme();
+
+  return { theme, toggleTheme };
+};
+
+export { usePupsColor, usePupsTheme, SlideColorsContext, useTheme };
 export type { SlidePupColorProps };
