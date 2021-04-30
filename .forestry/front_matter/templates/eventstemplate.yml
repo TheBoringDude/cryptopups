@@ -28,4 +28,5 @@ fields:
   default: now
   hidden: true
 pages:
+- _events/big-drop-gaze-into-the-abyss.md
 - _events/giveaway-mint-2-10.md
