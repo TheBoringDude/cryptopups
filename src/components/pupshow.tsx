@@ -21,7 +21,9 @@ export const PupShow = () => {
               onClick={() => {
                 togglePupMode(color.name);
               }}
-              className={`p-4 ${color.color} ${color.name === pupmode ? 'rounded-full' : ''}`}
+              className={`p-4 border border-gray-700 ${color.color} ${
+                color.name === pupmode ? 'rounded-full' : ''
+              }`}
               title={color.name}
             ></button>
           </li>

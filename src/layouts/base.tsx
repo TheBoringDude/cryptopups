@@ -17,9 +17,11 @@ export const BaseLayout = ({ title, children }: BaseLayoutProps) => {
       <header>
         <Navigation />
       </header>
+      <hr className="border-gray-300 dark:border-gray-700" />
 
       {children}
 
+      <hr className="border-gray-300 dark:border-gray-700" />
       {/* footer section */}
       <footer className="bg-gray-800 py-8">
         <Footer />

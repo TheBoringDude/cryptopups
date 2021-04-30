@@ -39,7 +39,7 @@ const getInitTheme = () => {
 
 const setClassTHeme = (t: string) => {
   const root = window.document.documentElement;
-  root.classList.remove(t === 'dark' ? 'dark' : 'light');
+  root.classList.remove(t === 'dark' ? 'light' : 'dark');
   root.classList.add(t);
   window.localStorage.setItem('theme', t);
 };

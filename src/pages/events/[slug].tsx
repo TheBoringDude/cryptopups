@@ -1,3 +1,4 @@
+import { MarkdownRenderContent } from '@components/markdown-content';
 import { BaseLayout } from '@layouts/base';
 import { BlogLayout } from '@layouts/blog';
 import { getAllBlogs, getBlogBySlug } from '@lib/blog/blogs';
@@ -47,17 +48,16 @@ type EventsManagerProps = {
 
 const EventsManager = (props: EventsManagerProps) => {
   const pupmode = usePupsColor();
+
   return (
     <BaseLayout title={`${props.event.event_title}`}>
       <div className="my-12 w-5/6 sm:w-4/5 md:w-2/3 mx-auto">
         <div>
-          <h2 className={`text-4xl font-bold tracking-wide ${pupmode.text}`}>
+          <h2 className={`text-4xl font-black tracking-wide ${pupmode.text}`}>
             {props.event.event_title}
           </h2>
           <hr />
-          <div className="prose lg:prose-lg prose-rose text-gray-200 max-w-full">
-            <article dangerouslySetInnerHTML={{ __html: props.content }}></article>
-          </div>
+          <MarkdownRenderContent content={props.content} />
         </div>
       </div>
     </BaseLayout>

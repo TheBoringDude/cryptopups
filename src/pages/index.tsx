@@ -35,11 +35,11 @@ export default function Home({ event }: HomeProps) {
         <EventsSection event={event} />
         <section className="grid grid-cols-1 sm:grid-cols-5 items-center">
           <div className="col-span-1 sm:col-span-3">
-            <h1 className="text-center sm:text-left text-5xl sm:text-6xl lg:text-7xl font-black text-white">
+            <h1 className="text-center sm:text-left text-5xl sm:text-6xl lg:text-7xl font-black text-coolGray-700 dark:text-white">
               Welcome to{' '}
               <span className="text-5xl sm:text-7xl lg:text-8xl underline">cryptopups</span>!
             </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl font-light tracking-wide mt-8 text-gray-100">
+            <p className="text-lg sm:text-xl lg:text-2xl font-light tracking-wide mt-8 text-coolGray-500 dark:text-gray-100">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, minus expedita.
               Ratione, qui.
             </p>
@@ -73,7 +73,9 @@ export default function Home({ event }: HomeProps) {
 
       <section className="py-12">
         <Container className="text-center">
-          <h2 className="text-center font-black text-white text-5xl">Pups! Archive</h2>
+          <h2 className="text-center font-black text-coolGray-700 dark:text-white text-5xl">
+            Pups! Archive
+          </h2>
           <ArchiveTabHandler />
         </Container>
         {/* PS: I do not to refactor this ;-)
