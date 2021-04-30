@@ -103,5 +103,11 @@ const usePupsColor = (): SlidePupColorProps => {
   return SlideColorsContext[pupmode];
 };
 
-export { usePupsColor, usePupsTheme, SlideColorsContext };
+const useTheme = () => {
+  const { theme, toggleTheme } = usePupsTheme();
+
+  return { theme, toggleTheme };
+};
+
+export { usePupsColor, usePupsTheme, SlideColorsContext, useTheme };
 export type { SlidePupColorProps };
