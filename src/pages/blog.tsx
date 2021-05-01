@@ -12,7 +12,7 @@ type AllBlogStaticProps = {
   blogs: BlogDataProps[];
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const allBlogs = getAllBlogs();
 
   return {
@@ -24,7 +24,7 @@ const BlogPage = ({ blogs }: AllBlogStaticProps) => {
   const pupmode = usePupsColor();
 
   return (
-    <BaseLayout title="Blog | cryptopups!">
+    <BaseLayout title="Our Stories & Blog | cryptopups!">
       <Container layouts="w-5/6">
         <div className="my-8">
           <h2 className="text-4xl font-black text-coolGray-700 dark:text-white tracking-widde">
@@ -38,9 +38,7 @@ const BlogPage = ({ blogs }: AllBlogStaticProps) => {
                 className="bg-coolGray-700 dark:bg-coolGray-800 rounded-lg shadow-lg border dark:border-gray-800"
               >
                 <h3
-                  className={`${pupmode.color} text-3xl ${
-                    pupmode.color === 'bg-white' ? 'text-gray-700' : 'text-gray-100'
-                  } font-extrabold py-3 pl-4 rounded-t-md`}
+                  className={`${pupmode.color} text-3xl text-gray-100 font-extrabold py-3 pl-4 rounded-t-md`}
                 >
                   {blog.title}
                 </h3>

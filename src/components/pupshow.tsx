@@ -15,7 +15,7 @@ export const PupShow = () => {
       />
       <ul className="absolute top-0 flex">
         {/* map over the object theme in here */}
-        {Object.entries(SlideColorsContext).map(([key, color], index) => (
+        {Object.entries(SlideColorsContext).map(([_, color], index) => (
           <li key={index} className="mx-1">
             <button
               onClick={() => {
