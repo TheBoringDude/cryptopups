@@ -1,5 +1,8 @@
 import { CalculateEventTime } from '@lib/events/event-time';
 import { EventProps } from '@lib/events/types';
+import { usePupsColor } from '@lib/theme';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { ThemeAnchorText } from './theme/anchor';
 import { ThemeLinkButton, ThemeTextButton } from './theme/buttons';
@@ -9,6 +12,7 @@ type EventsSectionProps = {
 };
 
 const EventsSection = ({ event }: EventsSectionProps) => {
+  const pupmode = usePupsColor();
   const [timeLeft, setTimeLeft] = useState(CalculateEventTime(event.date));
 
   useEffect(() => {
@@ -20,18 +24,26 @@ const EventsSection = ({ event }: EventsSectionProps) => {
   });
 
   return (
-    <section className="bg-gray-800 text-white p-2 rounded-md text-center mb-8 text-xl flex flex-col sm:flex-row items-center justify-center w-full">
-      <p className="tracking-wide flex items-center mr-2">
-        <span className="font-black tracking-wide mr-2 text-2xl">
-          {Object.keys(timeLeft).map(
-            (val, index) => `${timeLeft[val]}${index < Object.keys(timeLeft).length - 1 ? ':' : ''}`
-          )}
-        </span>
-        | We will be having a <br className="block sm:hidden" />
-      </p>
-      <b className="underline mx-2">{event.event_title}</b>
-      <ThemeTextButton href={`/events/${event.slug}`}>Learn More</ThemeTextButton>
-    </section>
+    <Link href={`/events/${event.slug}`}>
+      <a>
+        <section
+          className={`${pupmode.button.base} ${pupmode.button.hover} flex flex-col md:flex-row items-center justify-between w-full p-2`}
+        >
+          <div className="flex items-center">
+            <Image src={event.image} height={55} width={100} />
+            <p className="text-xl text-white ml-4 font-black tracking-wider">{event.event_title}</p>
+          </div>
+          <p className="text-2xl font-black tracking-wider text-white mt-4 md:mt-0">
+            {Object.keys(timeLeft).map(
+              (val, index) =>
+                `${('0' + timeLeft[val]).slice(-2)}${
+                  index < Object.keys(timeLeft).length - 1 ? ' : ' : ''
+                }`
+            )}
+          </p>
+        </section>
+      </a>
+    </Link>
   );
 };
 

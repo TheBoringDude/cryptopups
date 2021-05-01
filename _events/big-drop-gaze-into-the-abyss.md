@@ -1,10 +1,10 @@
 ---
 post_date: 2021-04-30T23:20:15.000+00:00
 event_title: Big Drop on Saturday!
-date: 2021-05-01T06:00:00.000+00:00
-image: "/blog/media/e0jgfkexmaerlwx.jpeg"
-
+date: 2021-05-01T06:00:00.00Z
+image: '/blog/media/e0jgfkexmaerlwx.jpeg'
 ---
+
 ![](/blog/media/e0jgfkexmaerlwx.jpeg)
 
 We're coming, Brothers. Big drop on Saturday, don't miss it
@@ -17,6 +17,6 @@ We're coming, Brothers. Big drop on Saturday, don't miss it
 
 [@ArtistByron](https://twitter.com/ArtistByron)
 
-[@coinkit_](https://twitter.com/coinkit_) mon 0.25 40 [$WAX](https://twitter.com/search?q=%24WAX&src=cashtag_click)
+[@coinkit\_](https://twitter.com/coinkit_) mon 0.25 40 [$WAX](https://twitter.com/search?q=%24WAX&src=cashtag_click)
 
 More Info: [Twitter Status](https://twitter.com/apppllleee_pie/status/1387777737339850752)

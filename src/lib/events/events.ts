@@ -2,6 +2,7 @@
 This DIR is based from: :https://github.com/forestryio/next-blog-forestry/tree/master/lib
 */
 
+import { json } from '@utils/json';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
@@ -25,6 +26,7 @@ const getEventBySlug = (slug: string): EventProps => {
     date: data.date,
     event_title: data.event_title,
     post_date: data.post_date,
+    image: data.image,
     content: content
   };
 };
@@ -45,7 +47,7 @@ const getAllEvents = () => {
 const getLatestEvent = () => {
   const events = getAllEvents();
 
-  return events.reduce((a, b) => (new Date(a.post_date) > new Date(b.post_date) ? a : b));
+  return json(events.reduce((a, b) => (new Date(a.post_date) > new Date(b.post_date) ? a : b)));
 };
 
 export { getEventBySlug, getAllEvents, getLatestEvent };

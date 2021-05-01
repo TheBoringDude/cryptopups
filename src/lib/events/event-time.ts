@@ -1,5 +1,5 @@
 export const CalculateEventTime = (date: string) => {
-  const d = new Date(date);
+  const d = new Date(new Date(date).getTime() + 8 * 60 * 60 * 1000); // GMT+8
 
   const diff = +d - +new Date();
   if (diff > 0) {

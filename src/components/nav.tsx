@@ -11,7 +11,7 @@ import { ToggleThemeButton } from './toggle-theme';
 export const Navigation = () => {
   return (
     <Container>
-      <nav className="py-4 flex flex-col xs:flex-row items-center justify-between">
+      <nav className="py-4 flex flex-col sm:flex-row items-center justify-between">
         <Link href="/">
           <a>
             <Image src="/logo-min.png" height={32} width={205} />
@@ -19,16 +19,16 @@ export const Navigation = () => {
         </Link>
 
         <ul className="inline-flex items-center text-coolGray-700 dark:text-white text-lg">
-          <li className="ml-8">
+          <li className="mx-3 sm:ml-8">
             <a href="/archive">Gallery</a>
           </li>
-          <li className="ml-8">
+          <li className="mx-3 sm:ml-8">
             <a href="/blog">Blog</a>
           </li>
-          <li className="ml-8">
+          <li className="mx-3 sm:ml-8">
             <BuyNowBtn />
           </li>
-          <li className="ml-8">
+          <li className="mx-3 sm:ml-8">
             <ToggleThemeButton />
           </li>
         </ul>

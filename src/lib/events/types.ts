@@ -4,6 +4,7 @@ type EventProps = {
   date: string;
   post_date: string;
   content?: string;
+  image: string;
 };
 
 export type { EventProps };

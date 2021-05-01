@@ -7,24 +7,28 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { getAllBlogs } from '@lib/blog/blogs';
 import { BlogDataProps } from '@lib/blog/types';
 import { json } from '@utils/json';
+import { getLatestEvent } from '@lib/events/events';
+import { EventProps } from '@lib/events/types';
 
 type AllBlogStaticProps = {
   blogs: BlogDataProps[];
+  event: EventProps;
 };
 
 export const getStaticProps: GetStaticProps = async () => {
   const allBlogs = getAllBlogs();
+  const event = getLatestEvent();
 
   return {
-    props: { blogs: json<BlogDataProps[]>(allBlogs) }
+    props: { blogs: json<BlogDataProps[]>(allBlogs), event }
   };
 };
 
-const BlogPage = ({ blogs }: AllBlogStaticProps) => {
+const BlogPage = ({ blogs, event }: AllBlogStaticProps) => {
   const pupmode = usePupsColor();
 
   return (
-    <BaseLayout title="Our Stories & Blog | cryptopups!">
+    <BaseLayout event={event} title="Our Stories & Blog | cryptopups!">
       <Container layouts="w-5/6">
         <div className="my-8">
           <h2 className="text-4xl font-black text-coolGray-700 dark:text-white tracking-widde">

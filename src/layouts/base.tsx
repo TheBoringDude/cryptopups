@@ -4,16 +4,20 @@ import DefaultLayout from '@layouts/Default';
 
 import { Navigation } from '@components/nav';
 import { Footer } from '@components/footer';
+import { EventsSection } from '@components/events';
+import { EventProps } from '@lib/events/types';
 
 type BaseLayoutProps = {
   title: string;
   children: ReactNode;
+  event: EventProps;
 };
 
-export const BaseLayout = ({ title, children }: BaseLayoutProps) => {
+export const BaseLayout = ({ title, children, event }: BaseLayoutProps) => {
   return (
     <DefaultLayout pageTitle={title}>
       {/* header section */}
+      <EventsSection event={event} />
       <header>
         <Navigation />
       </header>

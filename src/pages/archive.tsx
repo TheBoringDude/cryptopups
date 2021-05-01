@@ -1,10 +1,25 @@
 import { ArchiveTabHandler } from '@components/archive/tabs';
 import { Container } from '@components/container';
 import { BaseLayout } from '@layouts/base';
+import { getLatestEvent } from '@lib/events/events';
+import { EventProps } from '@lib/events/types';
+import { GetStaticProps } from 'next';
 
-const ArchivePage = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const event = getLatestEvent();
+
+  return {
+    props: { event }
+  };
+};
+
+type ArchiveProps = {
+  event: EventProps;
+};
+
+const ArchivePage = ({ event }: ArchiveProps) => {
   return (
-    <BaseLayout title="Archive Gallery">
+    <BaseLayout event={event} title="Archive Gallery">
       <section className="py-12">
         <Container className="text-center">
           <h2 className="text-center font-black text-coolGray-700 dark:text-white text-5xl">

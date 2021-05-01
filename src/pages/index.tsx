@@ -33,10 +33,9 @@ type HomeProps = {
 
 export default function Home({ event }: HomeProps) {
   return (
-    <BaseLayout title="cryptopups! | Welcome">
+    <BaseLayout title="cryptopups! | Welcome" event={event}>
       {/* showcase header */}
       <Container className="py-20 px-4 lg:px-8">
-        <EventsSection event={event} />
         <section className="grid grid-cols-1 2md:grid-cols-5 items-center">
           <div className="col-span-1 2md:col-span-3 text-center 2md:text-left">
             <h1 className="2md:text-left text-4xl xs:text-5xl md:text-6xl xl:text-7xl font-black text-coolGray-700 dark:text-white">

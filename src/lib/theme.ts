@@ -13,9 +13,12 @@ type SlidePupColorProps = {
   };
   name: PupsModeColors;
   prose: string;
+  eventTheme: string;
 };
 
-const SlideColorsContext = {
+type SlideMap = { [key: string]: SlidePupColorProps };
+
+const SlideColorsContext: SlideMap = {
   blue: {
     color: 'bg-blue-500',
     text: 'text-blue-500',
@@ -25,7 +28,8 @@ const SlideColorsContext = {
       hover: 'hover:bg-blue-600'
     },
     name: 'blue',
-    prose: 'prose-blue'
+    prose: 'prose-blue',
+    eventTheme: 'bg-blue-100'
   },
   green: {
     color: 'bg-green-500',
@@ -36,7 +40,8 @@ const SlideColorsContext = {
       hover: 'hover:bg-green-600'
     },
     name: 'green',
-    prose: 'prose-green'
+    prose: 'prose-green',
+    eventTheme: 'bg-green-100'
   },
   purple: {
     color: 'bg-purple-500',
@@ -47,7 +52,8 @@ const SlideColorsContext = {
       hover: 'hover:bg-purple-600'
     },
     name: 'purple',
-    prose: 'prose-purple'
+    prose: 'prose-purple',
+    eventTheme: 'bg-purple-100'
   },
   yellow: {
     color: 'bg-yellow-500',
@@ -58,7 +64,8 @@ const SlideColorsContext = {
       hover: 'hover:bg-yellow-600'
     },
     name: 'yellow',
-    prose: 'prose-yellow'
+    prose: 'prose-yellow',
+    eventTheme: 'bg-yellow-100'
   },
   orange: {
     color: 'bg-orange-500',
@@ -69,7 +76,8 @@ const SlideColorsContext = {
       hover: 'hover:bg-orange-600'
     },
     name: 'orange',
-    prose: 'prose-orange'
+    prose: 'prose-orange',
+    eventTheme: 'bg-orange-100'
   },
   rose: {
     color: 'bg-rose-500',
@@ -80,7 +88,8 @@ const SlideColorsContext = {
       hover: 'hover:bg-rose-600'
     },
     name: 'rose',
-    prose: 'prose-rose'
+    prose: 'prose-rose',
+    eventTheme: 'bg-rose-100'
   }
 };
 
