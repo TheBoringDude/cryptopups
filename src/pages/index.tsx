@@ -44,8 +44,8 @@ export default function Home({ event }: HomeProps) {
               <span className="text-5xl md:text-7xl xl:text-8xl underline">cryptopups</span>!
             </h1>
             <p className="text-xl lg:text-2xl tracking-wide mt-8 text-coolGray-500 dark:text-gray-100">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, minus expedita.
-              Ratione, qui.
+              Where cute, cool, beautiful and amazingly crafted puppies reside,{' '}
+              <span className="font-black">`pups`</span> all the way to the moon!
             </p>
 
             {/* just some buttons in here */}
