@@ -31,14 +31,14 @@ const BlogPage = ({ blogs }: AllBlogStaticProps) => {
             Crypto Blogs!
           </h2>
 
-          <section className="my-8 w-2/3 mx-auto">
+          <section className="my-8 w-full sm:w-4/5 xl:w-2/3 mx-auto">
             {blogs.map((blog, index) => (
               <div
                 key={index}
                 className="bg-coolGray-700 dark:bg-coolGray-800 rounded-lg shadow-lg border dark:border-gray-800"
               >
                 <h3
-                  className={`${pupmode.color} text-3xl text-gray-100 font-extrabold py-3 pl-4 rounded-t-md`}
+                  className={`${pupmode.color} text-2xl md:text-3xl text-gray-100 font-extrabold py-3 pl-4 rounded-t-md`}
                 >
                   {blog.title}
                 </h3>

@@ -7,7 +7,7 @@ export type ArchiveStateProps = 'first-edition' | 'specials' | 'fantasy' | 'cele
 
 export const ArchiveButtons = [
   {
-    title: 'First Edition',
+    title: '1st Edition',
     key: <ArchiveStateProps>'first-edition'
   },
   {

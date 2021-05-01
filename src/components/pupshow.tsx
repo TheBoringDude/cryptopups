@@ -22,7 +22,7 @@ export const PupShow = () => {
         <Image src="/images/featured/rose.png" className="rounded-lg" height={550} width={550} />
       ) : null}
 
-      <ul className="absolute top-0 inset-x-0 mt-16 flex justify-center w-full">
+      <ul className="absolute top-0 inset-x-0 mt-4 xs:mt-8 md:mt-16 flex justify-center w-full">
         {/* map over the object theme in here */}
         {Object.entries(SlideColorsContext).map(([_, color], index) => (
           <li key={index} className="mx-1">

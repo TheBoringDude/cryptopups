@@ -32,6 +32,6 @@ _Mint 10 was accidentally burned_
 
 TWEETS:
 
-[https://twitter.com/apppllleee_pie/status/1387756295382470661](https://twitter.com/apppllleee_pie/status/1387756295382470661 'https://twitter.com/apppllleee_pie/status/1387756295382470661')
+[Tweet 1](https://twitter.com/apppllleee_pie/status/1387756295382470661 'https://twitter.com/apppllleee_pie/status/1387756295382470661')
 
-[https://twitter.com/apppllleee_pie/status/1387750057219268614](https://twitter.com/apppllleee_pie/status/1387750057219268614 'https://twitter.com/apppllleee_pie/status/1387750057219268614')
+[Tweet 2](https://twitter.com/apppllleee_pie/status/1387750057219268614 'https://twitter.com/apppllleee_pie/status/1387750057219268614')

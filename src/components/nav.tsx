@@ -10,7 +10,7 @@ import { ToggleThemeButton } from './toggle-theme';
 export const Navigation = () => {
   return (
     <Container>
-      <nav className="py-4 flex items-center justify-between">
+      <nav className="py-4 flex flex-col xs:flex-row items-center justify-between">
         <Link href="/">
           <a>
             <Image src="/logo-min.png" height={35} width={215} />
