@@ -47,7 +47,7 @@ const BlogManager = ({ blog, content }: BlogManagerProps) => {
   return (
     <BaseLayout title={`${blog.title} | cryptopups!`}>
       <RenderContent>
-        <h2 className={`text-5xl font-black tracking-wide ${pupmode.text}`}>{blog.title}</h2>
+        <h2 className={`text-5xl font-black tracking-wide ${pupmode?.text}`}>{blog.title}</h2>
         <div className="my-2 p-2 bg-gray-800 tracking-wide rounded-md flex flex-col sm:flex-row items-center justify-between">
           <h4 className="text-gray-200">@Adrich Laceste</h4>
           <p className="text-sm text-gray-300 font-light">{new Date(blog.date).toUTCString()}</p>

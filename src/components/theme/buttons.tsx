@@ -17,7 +17,7 @@ const ThemeButton = (props: ThemeButtonProps) => {
   return (
     <button
       {...props}
-      className={`${pupmode.button.base} ${pupmode.button.hover} ${props.className}`}
+      className={`${pupmode?.button.base} ${pupmode?.button.hover} ${props.className}`}
     >
       {props.children}
     </button>
@@ -30,7 +30,7 @@ const ThemeLinkButton = (props: LinkButtonProps) => {
   return (
     <LinkButton
       href={props.href}
-      className={`${pupmode.button.base} ${pupmode.button.hover} ${props.className}`}
+      className={`${pupmode?.button.base} ${pupmode?.button.hover} ${props.className}`}
     >
       {props.children}
     </LinkButton>
@@ -43,7 +43,7 @@ const ThemeTextButton = (props: LinkButtonProps) => {
   return (
     <LinkButton
       href={props.href}
-      className={`${pupmode.text} ${pupmode.textHover} ${props.className}`}
+      className={`${pupmode?.text} ${pupmode?.textHover} ${props.className}`}
     >
       {props.children}
     </LinkButton>

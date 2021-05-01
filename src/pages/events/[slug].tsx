@@ -48,7 +48,7 @@ const EventsManager = (props: EventsManagerProps) => {
   return (
     <BaseLayout title={`${props.event.event_title}`}>
       <RenderContent>
-        <h2 className={`text-4xl font-black tracking-wide ${pupmode.text}`}>
+        <h2 className={`text-4xl font-black tracking-wide ${pupmode?.text}`}>
           {props.event.event_title}
         </h2>
         <hr />

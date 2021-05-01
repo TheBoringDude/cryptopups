@@ -24,9 +24,9 @@ export const ArchiveTabHandler = () => {
               setArchives(button.key);
             }}
             className={`${
-              button.key == archives ? `${pupmode.button.base}` : 'bg-coolGray-600'
+              button.key == archives ? `${pupmode?.button.base}` : 'bg-coolGray-600'
             } py-2 px-6 md:px-8 text-gray-100 rounded-lg font-bold tracking-wide ${
-              pupmode.button.hover
+              pupmode?.button.hover
             }`}
           >
             {button.title}

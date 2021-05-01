@@ -38,7 +38,7 @@ const BlogPage = ({ blogs }: AllBlogStaticProps) => {
                 className="bg-coolGray-700 dark:bg-coolGray-800 rounded-lg shadow-lg border dark:border-gray-800"
               >
                 <h3
-                  className={`${pupmode.color} text-2xl md:text-3xl text-gray-100 font-extrabold py-3 pl-4 rounded-t-md`}
+                  className={`${pupmode?.color} text-2xl md:text-3xl text-gray-100 font-extrabold py-3 pl-4 rounded-t-md`}
                 >
                   {blog.title}
                 </h3>
