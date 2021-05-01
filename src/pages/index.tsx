@@ -13,6 +13,10 @@ import { getLatestEvent } from '@lib/events/events';
 import { EventProps } from '@lib/events/types';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { TELEGRAM_LINK } from '@utils/socialMedia';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faImages } from '@fortawesome/free-solid-svg-icons';
 
 export const getStaticProps: GetStaticProps = async () => {
   const event = getLatestEvent();
@@ -46,12 +50,15 @@ export default function Home({ event }: HomeProps) {
 
             {/* just some buttons in here */}
             <div className="inline-flex flex-col sm:flex-row mt-6">
-              <button
-                className="m-2 py-4 rounded-lg px-8 bg-coolGray-600 hover:bg-coolGray-700 text-gray-100 text-xl font-bold tracking-wide"
-                title="View Archive"
-              >
-                Archive
-              </button>
+              <Link href="/archive">
+                <a
+                  className="m-2 py-4 rounded-lg px-8 bg-coolGray-600 hover:bg-coolGray-700 text-gray-100 text-xl font-bold tracking-wide inline-flex items-center"
+                  title="View Archive"
+                >
+                  <FontAwesomeIcon icon={faImages} className="mr-2 text-3xl" />
+                  Archive
+                </a>
+              </Link>
               <ThemeAnchorButton
                 href={TELEGRAM_LINK.link}
                 title="Join Telegram Clubhouse"
@@ -63,31 +70,24 @@ export default function Home({ event }: HomeProps) {
             </div>
           </div>
           <div className="col-span-1 sm:col-span-2">
-            <PupShow />
+            <Image src="/images/featured-white.png" height={500} width={500} />
           </div>
         </section>
       </Container>
 
-      {/* TODO: add social icons in this section */}
       <SocialSection />
 
-      <section className="py-12">
-        <Container className="text-center">
-          <h2 className="text-center font-black text-coolGray-700 dark:text-white text-5xl">
-            Pups! Archive
-          </h2>
-          <ArchiveTabHandler />
-        </Container>
-        {/* PS: I do not to refactor this ;-)
-        
-        TODO: NEEDS Confirmation and checking...*/}
-        {/* <div
-          className="text-white text-center"
-          dangerouslySetInnerHTML={{
-            __html: `<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://www.cryptopups.cf/">Cryptopups</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.instagram.com/apppllleee_pie/">Adrich Laceste</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"></a></p>`
-          }}
-        ></div> */}
-      </section>
+      <hr />
+
+      <Container layouts="w-4/5" className="my-20 text-center">
+        <h2 className="text-5xl font-black tracking-wide text-coolGray-700 dark:text-gray-100">
+          Pups Picker!
+        </h2>
+        <p className="text-2xl tracking-wide text-coolGray-500 dark:text-gray-100 mt-2">
+          Want to do something fun? <br /> Try to change the theme of the color you want...
+        </p>
+        <PupShow />
+      </Container>
     </BaseLayout>
   );
 }

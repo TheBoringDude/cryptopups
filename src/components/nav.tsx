@@ -19,7 +19,7 @@ export const Navigation = () => {
 
         <ul className="inline-flex items-center text-coolGray-700 dark:text-white text-lg">
           <li className="ml-8">
-            <a href="#">Gallery</a>
+            <a href="/archive">Gallery</a>
           </li>
           <li className="ml-8">
             <a href="/blog">Blog</a>
