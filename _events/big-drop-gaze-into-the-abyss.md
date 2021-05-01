@@ -1,7 +1,8 @@
 ---
-post_date: 2021-04-30T23:20:15Z
+post_date: 2021-04-30T23:20:15.000+00:00
 event_title: Big Drop on Saturday!
-date: 2021-05-01T06:00:00Z
+date: 2021-05-01T06:00:00.000+00:00
+image: "/blog/media/e0jgfkexmaerlwx.jpeg"
 
 ---
 ![](/blog/media/e0jgfkexmaerlwx.jpeg)
