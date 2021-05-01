@@ -35,7 +35,7 @@ export default function Home({ event }: HomeProps) {
   return (
     <BaseLayout title="cryptopups! | Welcome">
       {/* showcase header */}
-      <Container className="py-8 px-4 lg:px-8">
+      <Container className="py-20 px-4 lg:px-8">
         <EventsSection event={event} />
         <section className="grid grid-cols-1 2md:grid-cols-5 items-center">
           <div className="col-span-1 2md:col-span-3 text-center 2md:text-left">

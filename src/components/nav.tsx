@@ -13,7 +13,7 @@ export const Navigation = () => {
       <nav className="py-4 flex flex-col xs:flex-row items-center justify-between">
         <Link href="/">
           <a>
-            <Image src="/logo-min.png" height={35} width={215} />
+            <Image src="/logo-min.png" height={32} width={205} />
           </a>
         </Link>
 
