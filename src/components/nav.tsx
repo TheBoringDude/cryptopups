@@ -4,6 +4,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { BuyNowBtn } from './buy-now';
 import { Container } from './container';
 import { ToggleThemeButton } from './toggle-theme';
 
@@ -23,6 +24,9 @@ export const Navigation = () => {
           </li>
           <li className="ml-8">
             <a href="/blog">Blog</a>
+          </li>
+          <li className="ml-8">
+            <BuyNowBtn />
           </li>
           <li className="ml-8">
             <ToggleThemeButton />
