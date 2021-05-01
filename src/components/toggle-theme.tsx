@@ -54,7 +54,7 @@ export const ToggleThemeButton = () => {
     <ThemeButton
       title="Toggle Theme"
       onClick={toggleTheme}
-      className="h-12 w-12 px-3 py-2 rounded-full"
+      className="h-12 w-12 px-3 py-2 rounded-full text-white"
     >
       {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
     </ThemeButton>

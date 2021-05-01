@@ -9,16 +9,19 @@ import { Container } from './container';
 
 export const Footer = () => {
   return (
-    <Container className="flex flex-col lg:flex-row items-center justify-between">
+    <Container className="flex flex-col 2md:flex-row items-center justify-between">
       <Link href="/">
         <a>
           <Image src="/logo-min.png" height={20} width={120} />
         </a>
       </Link>
-      <p className="text-gray-100">&copy; {new Date().getFullYear()} | All Rights Reserved</p>
+
+      <p className="text-gray-100 my-4 2md:my-0">
+        &copy; {new Date().getFullYear()} | All Rights Reserved
+      </p>
 
       {/* just some external links */}
-      <ul className="text-gray-200">
+      <ul className="text-gray-200 text-center 2md:text-left">
         <li>
           <a className="hover:underline" href="https://notiriscreations.cf">
             Iris Designs
