@@ -27,6 +27,11 @@ fields:
   label: Post Date
   default: now
   hidden: true
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
 pages:
 - _events/big-drop-gaze-into-the-abyss.md
 - _events/giveaway-mint-2-10.md
