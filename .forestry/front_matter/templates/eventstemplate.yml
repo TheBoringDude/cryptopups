@@ -32,6 +32,22 @@ fields:
   config:
     maxSize: 64
   label: Image
+- name: event_type
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Charity
+    - Big Drop
+    - GiveAway
+    - Special
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Event Type
 pages:
 - _events/big-drop-gaze-into-the-abyss.md
 - _events/giveaway-mint-2-10.md
