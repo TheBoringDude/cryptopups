@@ -1,6 +1,6 @@
 ---
 post_date: 2021-05-02T12:55:54Z
-event_type: ''
+event_type: GiveAway
 event_title: Tweety had something special for everyone
 date: 2021-05-02T04:00:00Z
 image: "/blog/media/e0xo2ghucayoqa0.jpeg"
