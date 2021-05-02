@@ -16,7 +16,8 @@ module.exports = {
       '2xl': defaultTheme.screens['2xl']
     },
     colors: {
-      ...colors
+      ...colors,
+      neonBlue: '#04d9ff'
     },
     fontFamily: {
       sans: ['"Nunito"', 'sans-serif']

@@ -8,6 +8,12 @@ import { markdownToHtml } from '@lib/markdown';
 import { usePupsColor } from '@lib/theme';
 import { array_string } from '@utils/etc';
 import { json } from '@utils/json';
+import { EventLayout } from '@layouts/eventLayout';
+import Image from 'next/image';
+import Link from 'next/link';
+import { CalculateEventTime } from '@lib/events/event-time';
+import { useState, useEffect } from 'react';
+import { useHasMounted } from '@lib/useHasMounted';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const event = getEventBySlug(array_string(context.params.slug));
@@ -46,18 +52,47 @@ type EventsManagerProps = {
 };
 
 const EventsManager = (props: EventsManagerProps) => {
+  const mounted = useHasMounted();
   const pupmode = usePupsColor();
 
+  const [timeLeft, setTimeLeft] = useState(CalculateEventTime(props.event.date));
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTimeLeft(CalculateEventTime(props.event.date));
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  });
+
+  if (!mounted) return null;
+
   return (
-    <BaseLayout event={props.onGoingEvent} title={`${props.event.event_title}`}>
-      <RenderContent>
-        <h2 className={`text-4xl font-black tracking-wide ${pupmode?.text}`}>
-          {props.event.event_title}
-        </h2>
-        <hr />
-        <MarkdownRenderContent content={props.content} />
-      </RenderContent>
-    </BaseLayout>
+    <EventLayout event={props.event} onGoingEvent={props.onGoingEvent}>
+      <div className="relative h-screen w-full">
+        {/* timer */}
+        <p className="font-light text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider absolute z-20 top-24 inset-x-0 text-neonBlue text-center">
+          {timeLeft
+            ? Object.keys(timeLeft).map(
+                (val, index) =>
+                  `${('0' + timeLeft[val]).slice(-2)}${
+                    index < Object.keys(timeLeft).length - 1 ? ' : ' : ''
+                  }`
+              )
+            : 'EVENT IS OVER!'}
+        </p>
+        {/* end timer */}
+        <Link href="/">
+          <a
+            className="tracking-wide absolute top-8 left-8 z-10 text-white hover:underline"
+            title="Return To Home"
+          >
+            Return Home
+          </a>
+        </Link>
+        <Image src={props.event.image} layout="fill" objectFit="cover" />
+      </div>
+    </EventLayout>
   );
 };
 
