@@ -30,16 +30,18 @@ const EventsSection = ({ event }: EventsSectionProps) => {
           className={`${pupmode.button.base} ${pupmode.button.hover} flex flex-col md:flex-row items-center justify-between w-full p-2`}
         >
           <div className="flex items-center">
-            <Image src={event.image} height={55} width={100} />
+            <Image src={event.image} height={55} width={100} className="object-cover" />
             <p className="text-xl text-white ml-4 font-black tracking-wider">{event.event_title}</p>
           </div>
           <p className="text-2xl font-black tracking-wider text-white mt-4 md:mt-0">
-            {timeLeft ? Object.keys(timeLeft).map(
-              (val, index) =>
-                `${('0' + timeLeft[val]).slice(-2)}${
-                  index < Object.keys(timeLeft).length - 1 ? ' : ' : ''
-                }`
-            ) : null}
+            {timeLeft
+              ? Object.keys(timeLeft).map(
+                  (val, index) =>
+                    `${('0' + timeLeft[val]).slice(-2)}${
+                      index < Object.keys(timeLeft).length - 1 ? ' : ' : ''
+                    }`
+                )
+              : null}
           </p>
         </section>
       </a>

@@ -27,6 +27,7 @@ const getEventBySlug = (slug: string): EventProps => {
     event_title: data.event_title,
     post_date: data.post_date,
     image: data.image,
+    event_type: data.event_type,
     content: content
   };
 };
