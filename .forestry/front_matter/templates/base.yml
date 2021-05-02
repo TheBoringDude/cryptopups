@@ -30,4 +30,5 @@ fields:
   hidden: true
   default: now
 pages:
+- _blog/happy-1k-follows.md
 - _blog/mint-2-10-giveaway-winners.md
