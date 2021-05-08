@@ -22,7 +22,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
       blog: json<BlogDataProps>(post),
       content,
       event
-    }
+    },
+    revalidate: 1
   };
 };
 

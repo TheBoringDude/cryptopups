@@ -20,7 +20,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const event = getLatestEvent();
 
   return {
-    props: { blogs: json<BlogDataProps[]>(allBlogs), event }
+    props: { blogs: json<BlogDataProps[]>(allBlogs), event },
+    revalidate: 1
   };
 };
 

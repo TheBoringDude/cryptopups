@@ -26,7 +26,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
       event: json<EventProps>(event),
       content,
       onGoingEvent
-    }
+    },
+    revalidate: 1
   };
 };
 
