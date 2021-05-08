@@ -37,24 +37,24 @@ const BlogPage = ({ blogs, event }: AllBlogStaticProps) => {
             Crypto Blogs!
           </h2>
 
-          <section className="my-8 w-full sm:w-4/5 xl:w-2/3 mx-auto">
+          <section className="my-8 w-full lg:w-4/5 xl:w-2/3 mx-auto">
             {blogs.map((blog, index) => (
               <div
                 key={index}
-                className="my-8 rounded-lg shadow-lg border dark:border-gray-800 flex items-center justify-between"
+                className="my-8 rounded-lg bg-white shadow-lg border dark:border-gray-800 flex flex-col md:flex-row items-center justify-between"
               >
-                <div className={blog.image ? 'w-1/4' : ''}>
+                <div className={blog.image ? 'w-full md:w-1/4 flex justify-center' : ''}>
                   {blog.image && (
-                    <Image src={blog.image} height={200} width={200} className="object-cover" />
+                    <Image src={blog.image} height={200} width={200} objectFit="cover" />
                   )}
                 </div>
                 <div
                   className={`${
-                    blog.image ? 'w-3/4 rounded-tr-lg rounded-br-lg' : 'w-full rounded-lg'
+                    blog.image ? 'w-full md:w-3/4 rounded-tr-lg rounded-br-lg' : 'w-full rounded-lg'
                   } bg-coolGray-700 dark:bg-coolGray-800`}
                 >
                   <h3
-                    className={`${pupmode?.color} text-2xl md:text-3xl text-gray-100 font-extrabold py-3 pl-4 rounded-tr-md`}
+                    className={`${pupmode?.color} text-2xl text-gray-100 font-extrabold py-3 pl-4 rounded-tr-md`}
                   >
                     {blog.title}
                   </h3>
