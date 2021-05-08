@@ -4,6 +4,7 @@ title: Cryptopups World X Crypto Swatch Collaboration!
 excerpt: |-
   The #Cryptopups will be celebrating #MothersDay.
   Celebrate with us and get your beloved mother an NFT gift.
+blog_image: "/blog/media/000073.png"
 
 ---
 ![](/blog/media/000073.png)
