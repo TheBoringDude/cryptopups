@@ -1,7 +1,9 @@
 ---
 date: 2021-05-08T09:50:05Z
 title: Cryptopups World X Crypto Swatch Collaboration!
-excerpt: cryptopupsworld-x-cryptoswatch-collaboration
+excerpt: |-
+  The #Cryptopups will be celebrating #MothersDay.
+  Celebrate with us and get your beloved mother an NFT gift.
 
 ---
 ![](/blog/media/000073.png)
