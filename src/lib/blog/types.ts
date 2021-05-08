@@ -4,6 +4,7 @@ interface BlogDataProps {
   excerpt: string;
   date: string;
   content?: string;
+  image?: string;
 }
 
 export type { BlogDataProps };

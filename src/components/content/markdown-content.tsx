@@ -8,7 +8,8 @@ export const MarkdownRenderContent = ({ content }: MarkdownContentProps) => {
   const pupmode = usePupsColor();
   return (
     <div
-      className={`prose md:prose-lg lg:prose-xl text-coolGray-700 dark:text-gray-200 ${pupmode?.prose} max-w-full`}
+      id="markdown-render"
+      className={`prose md:prose-lg lg:prose-xl ${pupmode?.prose} max-w-full`}
     >
       <article dangerouslySetInnerHTML={{ __html: content }}></article>
     </div>

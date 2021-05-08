@@ -25,6 +25,7 @@ const getBlogBySlug = (slug: string): BlogDataProps => {
     date: data.date,
     title: data.title,
     excerpt: data.excerpt,
+    image: data.blog_image,
     content: content
   };
 };

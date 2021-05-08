@@ -9,6 +9,7 @@ import { BlogDataProps } from '@lib/blog/types';
 import { json } from '@utils/json';
 import { getLatestEvent } from '@lib/events/events';
 import { EventProps } from '@lib/events/types';
+import Image from 'next/image';
 
 type AllBlogStaticProps = {
   blogs: BlogDataProps[];
@@ -40,28 +41,43 @@ const BlogPage = ({ blogs, event }: AllBlogStaticProps) => {
             {blogs.map((blog, index) => (
               <div
                 key={index}
-                className="my-8 bg-coolGray-700 dark:bg-coolGray-800 rounded-lg shadow-lg border dark:border-gray-800"
+                className="my-8 rounded-lg shadow-lg border dark:border-gray-800 flex items-center justify-between"
               >
-                <h3
-                  className={`${pupmode?.color} text-2xl md:text-3xl text-gray-100 font-extrabold py-3 pl-4 rounded-t-md`}
-                >
-                  {blog.title}
-                </h3>
-                <div className="px-6 my-3">
-                  <p className="text-gray-300 text-lg py-2">{blog.excerpt}</p>
-                  <div className="mt-2 mb-6">
-                    <ThemeLinkButton
-                      href={`/blog/${blog.slug}`}
-                      className="py-2 px-6 rounded-lg text-white"
-                    >
-                      Read More
-                    </ThemeLinkButton>
-                  </div>
+                <div className={blog.image ? 'w-1/4' : ''}>
+                  {blog.image && (
+                    <Image src={blog.image} height={200} width={200} className="object-cover" />
+                  )}
                 </div>
-                <div className="py-2 px-4 bg-coolGray-400 dark:bg-coolGray-700 rounded-b-md text-right text-sm">
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {new Date(blog.date).toUTCString()}
-                  </p>
+                <div
+                  className={`${
+                    blog.image ? 'w-3/4 rounded-tr-lg rounded-br-lg' : 'w-full rounded-lg'
+                  } bg-coolGray-700 dark:bg-coolGray-800`}
+                >
+                  <h3
+                    className={`${pupmode?.color} text-2xl md:text-3xl text-gray-100 font-extrabold py-3 pl-4 rounded-tr-md`}
+                  >
+                    {blog.title}
+                  </h3>
+                  <div className="px-6 my-3">
+                    <p className="text-gray-300 text-lg py-2">{blog.excerpt}</p>
+                    <div className="mt-2 mb-6">
+                      <ThemeLinkButton
+                        href={`/blog/${blog.slug}`}
+                        className="py-2 px-6 rounded-lg text-white"
+                      >
+                        Read More
+                      </ThemeLinkButton>
+                    </div>
+                  </div>
+                  <div
+                    className={`py-2 px-4 bg-coolGray-400 dark:bg-coolGray-700 text-right text-sm ${
+                      blog.image ? 'rounded-br-lg' : 'rouded-b-lg'
+                    }`}
+                  >
+                    <p className="text-gray-600 dark:text-gray-400">
+                      {new Date(blog.date).toUTCString()}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
