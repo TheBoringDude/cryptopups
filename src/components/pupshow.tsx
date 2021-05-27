@@ -30,7 +30,7 @@ export const PupShow = () => {
               onClick={() => {
                 togglePupMode(color.name);
               }}
-              className={`p-5 rounded-md ${color.color} ${
+              className={`p-3 lg:p-5 rounded-md ${color.color} ${
                 color.name === pupmode ? 'rounded-full' : ''
               }`}
               title={color.name}

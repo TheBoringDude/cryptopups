@@ -31,7 +31,7 @@ const EventsSection = ({ event }: EventsSectionProps) => {
         >
           <div className="flex items-center">
             <Image src={event.image} height={45} width={80} className="object-cover" />
-            <p className="text-lg text-white ml-4 font-bold tracking-wider">{event.event_title}</p>
+            <p className="text-white ml-4 font-bold tracking-wider">{event.event_title}</p>
           </div>
           <p className="text-2xl font-black tracking-wider text-white mt-4 md:mt-0">
             {timeLeft

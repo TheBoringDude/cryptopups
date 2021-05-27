@@ -16,7 +16,7 @@ export const ArchiveTabHandler = () => {
 
   return (
     <>
-      <div className="w-2/3 md:w-4/5 xl:w-1/2 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 items-center mt-8 text-base lg:text-lg">
+      <div className="w-2/3 md:w-4/5 xl:w-1/2 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 items-center mt-8">
         {ArchiveButtons.map((button, index) => (
           <button
             key={index}

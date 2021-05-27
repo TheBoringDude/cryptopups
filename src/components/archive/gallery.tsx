@@ -18,6 +18,7 @@ export const ArchiveGallery = ({ set }: ArchiveGalleryProps) => {
           <div key={index}>
             <Image
               className="rounded-xl"
+              objectFit="cover"
               src={image.src}
               alt={image.name}
               height={400}
