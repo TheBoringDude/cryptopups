@@ -22,20 +22,62 @@ const ArchivePage = ({ event }: ArchiveProps) => {
     <BaseLayout event={event} title="Archive Gallery">
       <section className="py-12">
         <Container className="text-center">
-          <h2 className="text-center font-black text-coolGray-700 dark:text-white text-5xl">
+          <h2 className="text-center font-black text-coolGray-700 dark:text-white text-5xl leading-relaxed">
             Pups! Archive
           </h2>
+          <p className="text-xl tracking-wide text-gray-600">Look at these cute pups...</p>
           <ArchiveTabHandler />
         </Container>
-        {/* PS: I do not to refactor this ;-)
-        
-        TODO: NEEDS Confirmation and checking...*/}
-        {/* <div
-          className="text-white text-center"
-          dangerouslySetInnerHTML={{
-            __html: `<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://www.cryptopups.cf/">Cryptopups</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.instagram.com/apppllleee_pie/">Adrich Laceste</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"></a></p>`
-          }}
-        ></div> */}
+
+        <div className="text-gray-700 dark:text-white text-center mt-8">
+          <div>
+            <p>
+              <a
+                className="hover:underline"
+                property="dct:title"
+                rel="cc:attributionURL"
+                href="https://www.cryptopups.cf/"
+              >
+                Cryptopups
+              </a>{' '}
+              by{' '}
+              <a
+                className="hover:underline"
+                rel="cc:attributionURL dct:creator"
+                property="cc:attributionName"
+                href="https://www.instagram.com/apppllleee_pie/"
+              >
+                Adrich Laceste
+              </a>{' '}
+              is licensed under{' '}
+              <a
+                href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1"
+                target="_blank"
+                rel="license noopener noreferrer"
+              >
+                Attribution-NonCommercial 4.0 International
+                <div className="flex items-center justify-center">
+                  <img
+                    className="h-6 w-6 mx-1"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+                  />
+                  <img
+                    className="h-6 w-6 mx-1"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+                  />
+                  <img
+                    className="h-6 w-6 mx-1"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
+                  />
+                </div>
+              </a>
+            </p>
+          </div>
+          <p className="mt-2">
+            NOTE: If you have bought one of the products (artwork) above, you can ignore this
+            license for the product.
+          </p>
+        </div>
       </section>
     </BaseLayout>
   );
