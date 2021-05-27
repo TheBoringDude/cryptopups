@@ -14,11 +14,11 @@ export const Navigation = () => {
       <nav className="py-4 flex flex-col sm:flex-row items-center justify-between">
         <Link href="/">
           <a>
-            <Image src="/logo-min.png" height={32} width={205} />
+            <Image src="/logo-min.png" height={25} width={150} />
           </a>
         </Link>
 
-        <ul className="inline-flex items-center text-coolGray-700 dark:text-white text-lg">
+        <ul className="inline-flex items-center text-coolGray-700 dark:text-white">
           <li className="mx-3 sm:ml-8">
             <a href="/archive">Gallery</a>
           </li>
