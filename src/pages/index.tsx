@@ -11,12 +11,13 @@ import { ThemeAnchorButton } from '@components/theme/anchor';
 import { BaseLayout } from '@layouts/base';
 import { getLatestEvent } from '@lib/events/events';
 import { EventProps } from '@lib/events/types';
-import { GetStaticProps, } from 'next';
+import { GetStaticProps } from 'next';
 import { TELEGRAM_LINK } from '@utils/socialMedia';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImages } from '@fortawesome/free-solid-svg-icons';
+import { NextSeo } from 'next-seo';
 
 export const getStaticProps: GetStaticProps = async () => {
   const event = getLatestEvent();
@@ -33,7 +34,12 @@ type HomeProps = {
 
 export default function Home({ event }: HomeProps) {
   return (
-    <BaseLayout title="cryptopups! | Welcome" event={event}>
+    <BaseLayout event={event}>
+      <NextSeo
+        title="Welcome"
+        description="Welcome to the Official Website of The World of CryptoPups. Where cute, cool, beautiful and amazingly crafted puppies reside, `pups` all the way to the moon!"
+      />
+
       {/* showcase header */}
       <Container className="py-20 px-4 lg:px-8">
         <section className="grid grid-cols-1 2md:grid-cols-5 items-center">

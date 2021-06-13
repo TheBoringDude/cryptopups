@@ -10,6 +10,7 @@ import { json } from '@utils/json';
 import { getLatestEvent } from '@lib/events/events';
 import { EventProps } from '@lib/events/types';
 import Image from 'next/image';
+import { NextSeo } from 'next-seo';
 
 type AllBlogStaticProps = {
   blogs: BlogDataProps[];
@@ -30,7 +31,9 @@ const BlogPage = ({ blogs, event }: AllBlogStaticProps) => {
   const pupmode = usePupsColor();
 
   return (
-    <BaseLayout event={event} title="Our Stories & Blog | cryptopups!">
+    <BaseLayout event={event}>
+      <NextSeo title="Our Blog &amp; Stories" description="Read our stories and how we become." />
+
       <Container layouts="w-5/6">
         <div className="my-8">
           <h2 className="text-4xl font-black text-coolGray-700 dark:text-white tracking-widde">

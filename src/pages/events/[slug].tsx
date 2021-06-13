@@ -14,6 +14,7 @@ import Link from 'next/link';
 import { CalculateEventTime } from '@lib/events/event-time';
 import { useState, useEffect } from 'react';
 import { useHasMounted } from '@lib/useHasMounted';
+import { NextSeo } from 'next-seo';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const event = getEventBySlug(array_string(context.params.slug));
@@ -70,6 +71,8 @@ const EventsManager = (props: EventsManagerProps) => {
 
   return (
     <EventLayout event={props.event} onGoingEvent={props.onGoingEvent}>
+      <NextSeo title={props.event.event_title} description={props.event.content} />
+
       {props.event.event_type === 'Big Drop' ? (
         <div className="relative h-screen w-full">
           {/* timer */}

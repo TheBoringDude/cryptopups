@@ -4,6 +4,7 @@ import { BaseLayout } from '@layouts/base';
 import { getLatestEvent } from '@lib/events/events';
 import { EventProps } from '@lib/events/types';
 import { GetStaticProps } from 'next';
+import { NextSeo } from 'next-seo';
 
 export const getStaticProps: GetStaticProps = async () => {
   const event = getLatestEvent();
@@ -19,7 +20,12 @@ type ArchiveProps = {
 
 const ArchivePage = ({ event }: ArchiveProps) => {
   return (
-    <BaseLayout event={event} title="Archive Gallery">
+    <BaseLayout event={event}>
+      <NextSeo
+        title="Our Pups Archive!"
+        description="View the cute puppies that we have made and published."
+      />
+
       <section className="py-12">
         <Container className="text-center">
           <h2 className="text-center font-black text-coolGray-700 dark:text-white text-5xl leading-relaxed">

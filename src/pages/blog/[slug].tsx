@@ -10,6 +10,7 @@ import { array_string } from '@utils/etc';
 import { RenderContent } from '@components/content/render-content';
 import { getLatestEvent } from '@lib/events/events';
 import { EventProps } from '@lib/events/types';
+import { NextSeo } from 'next-seo';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const post = getBlogBySlug(array_string(context.params.slug));
@@ -51,7 +52,9 @@ type BlogManagerProps = {
 const BlogManager = ({ blog, content, event }: BlogManagerProps) => {
   const pupmode = usePupsColor();
   return (
-    <BaseLayout event={event} title={`${blog.title} | cryptopups!`}>
+    <BaseLayout event={event}>
+      <NextSeo title={`${blog.title} - Blogs`} description={blog.excerpt} />
+
       <RenderContent>
         <h2 className={`text-5xl font-black tracking-wide ${pupmode?.text}`}>{blog.title}</h2>
         <div className="my-2 p-2 bg-gray-800 tracking-wide rounded-md flex flex-col sm:flex-row items-center justify-between">
