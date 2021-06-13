@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BuyNowBtn } from './buy-now';
 import { Container } from './container';
-import { ToggleThemeButton } from './toggle-theme';
 
 export const Navigation = () => {
   return (
@@ -14,7 +13,7 @@ export const Navigation = () => {
       <nav className="py-4 flex flex-col sm:flex-row items-center justify-between">
         <Link href="/">
           <a>
-            <Image src="/logo-min.png" height={25} width={150} />
+            <Image src="/logo.png" height={30} width={140} />
           </a>
         </Link>
 

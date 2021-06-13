@@ -13,7 +13,7 @@ export const Footer = () => {
     <Container className="flex flex-col 2md:flex-row items-center justify-between">
       <Link href="/">
         <a>
-          <Image src="/logo-min.png" height={20} width={120} />
+          <Image src="/logo.png" height={25} width={115} />
         </a>
       </Link>
 
