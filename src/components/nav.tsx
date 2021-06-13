@@ -28,9 +28,6 @@ export const Navigation = () => {
           <li className="mx-3 sm:ml-8">
             <BuyNowBtn />
           </li>
-          <li className="mx-3 sm:ml-8">
-            <ToggleThemeButton />
-          </li>
         </ul>
       </nav>
     </Container>

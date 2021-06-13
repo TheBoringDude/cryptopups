@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Container } from './container';
+import { ToggleThemeButton } from './toggle-theme';
 
 export const Footer = () => {
   return (
@@ -16,9 +17,12 @@ export const Footer = () => {
         </a>
       </Link>
 
-      <p className="text-gray-100 my-4 2md:my-0">
-        &copy; {new Date().getFullYear()} | All Rights Reserved
-      </p>
+      <div className="inline-flex items-center">
+        <p className="text-gray-100 my-4 2md:my-0 mr-2">
+          &copy; {new Date().getFullYear()} | All Rights Reserved
+        </p>
+        <ToggleThemeButton />
+      </div>
 
       {/* just some external links */}
       <ul className="text-gray-200 text-center 2md:text-left">

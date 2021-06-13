@@ -7,7 +7,12 @@ interface AnchorButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const ThemeAnchorButton = (props: AnchorButtonProps) => {
   return (
-    <a target="_blank" {...props} className={`${props.className} ${THEME_BUTTON()}`}>
+    <a
+      target="_blank"
+      rel="noreferrer"
+      {...props}
+      className={`${props.className} ${THEME_BUTTON()}`}
+    >
       {props.children}
     </a>
   );
@@ -15,7 +20,12 @@ const ThemeAnchorButton = (props: AnchorButtonProps) => {
 
 const ThemeAnchorText = (props: AnchorButtonProps) => {
   return (
-    <a target="_blank" {...props} className={`${props.className} ${THEME_ANCHOR()}`}>
+    <a
+      target="_blank"
+      rel="noreferrer"
+      {...props}
+      className={`${props.className} ${THEME_ANCHOR()}`}
+    >
       {props.children}
     </a>
   );
