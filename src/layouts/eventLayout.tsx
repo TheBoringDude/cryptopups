@@ -11,7 +11,7 @@ type EventLayoutProps = {
 
 export const EventLayout = ({ children, event, onGoingEvent }: EventLayoutProps) => {
   return (
-    <DefaultLayout pageTitle={event.event_title}>
+    <DefaultLayout>
       {event.slug !== onGoingEvent.slug && <EventsSection event={onGoingEvent} />}
       <div className="bg-coolGray-900">{children}</div>
     </DefaultLayout>
