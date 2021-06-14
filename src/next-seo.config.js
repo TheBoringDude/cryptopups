@@ -9,7 +9,8 @@ export default {
       {
         url: 'https://cryptopups.cf/logo.png',
         height: 200,
-        width: 400
+        width: 400,
+        alt: 'The World of CryptoPups'
       },
       {
         url: 'https://cryptopups.cf/images/featured-white.png',
@@ -20,7 +21,6 @@ export default {
   },
   twitter: {
     handle: '@apppllleee_pie',
-    site: '@apppllleee_pie',
     cardType: 'summary_large_image'
   },
   additionalMetaTags: [
