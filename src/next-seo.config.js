@@ -7,15 +7,15 @@ export default {
     site_name: 'World of CryptoPups',
     images: [
       {
+        url: 'https://cryptopups.cf/images/featured-white.png',
+        height: 200,
+        width: 200
+      },
+      {
         url: 'https://cryptopups.cf/logo.png',
         height: 200,
         width: 400,
         alt: 'The World of CryptoPups'
-      },
-      {
-        url: 'https://cryptopups.cf/images/featured-white.png',
-        height: 200,
-        width: 200
       }
     ]
   },

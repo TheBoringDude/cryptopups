@@ -1,7 +1,7 @@
 import { EventsSection } from '@components/events';
 import { EventProps } from '@lib/events/types';
 import { ReactNode } from 'react';
-import DefaultLayout from './Default';
+import DefaultLayout from './default';
 
 type EventLayoutProps = {
   children: ReactNode;
