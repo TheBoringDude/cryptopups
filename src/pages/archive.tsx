@@ -24,6 +24,10 @@ const ArchivePage = ({ event }: ArchiveProps) => {
       <NextSeo
         title="Our Pups Archive!"
         description="View the cute puppies that we have made and published."
+        openGraph={{
+          title: 'Our Pups Archive!',
+          description: 'View the cute puppies that we have made and published.'
+        }}
       />
 
       <section className="py-12">

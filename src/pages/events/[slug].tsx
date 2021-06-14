@@ -71,7 +71,14 @@ const EventsManager = (props: EventsManagerProps) => {
 
   return (
     <EventLayout event={props.event} onGoingEvent={props.onGoingEvent}>
-      <NextSeo title={props.event.event_title} description={props.event.content} />
+      <NextSeo
+        title={props.event.event_title}
+        description={props.event.content}
+        openGraph={{
+          title: props.event.event_title,
+          description: props.event.content
+        }}
+      />
 
       {props.event.event_type === 'Big Drop' ? (
         <div className="relative h-screen w-full">

@@ -53,7 +53,14 @@ const BlogManager = ({ blog, content, event }: BlogManagerProps) => {
   const pupmode = usePupsColor();
   return (
     <BaseLayout event={event}>
-      <NextSeo title={`${blog.title} - Blogs`} description={blog.excerpt} />
+      <NextSeo
+        title={`${blog.title} - Blogs`}
+        description={blog.excerpt}
+        openGraph={{
+          title: `${blog.title} - Blogs`,
+          description: blog.excerpt
+        }}
+      />
 
       <RenderContent>
         <h2 className={`text-5xl font-black tracking-wide ${pupmode?.text}`}>{blog.title}</h2>

@@ -32,7 +32,14 @@ const BlogPage = ({ blogs, event }: AllBlogStaticProps) => {
 
   return (
     <BaseLayout event={event}>
-      <NextSeo title="Our Blog &amp; Stories" description="Read our stories and how we become." />
+      <NextSeo
+        title="Our Blog &amp; Stories"
+        description="Read our stories and how we become."
+        openGraph={{
+          title: 'Our Blog &amp; Stories',
+          description: 'Read our stories and how we become.'
+        }}
+      />
 
       <Container layouts="w-5/6">
         <div className="my-8">

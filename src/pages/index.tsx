@@ -38,6 +38,11 @@ export default function Home({ event }: HomeProps) {
       <NextSeo
         title="Welcome"
         description="Welcome to the Official Website of The World of CryptoPups. Where cute, cool, beautiful and amazingly crafted puppies reside, `pups` all the way to the moon!"
+        openGraph={{
+          title: 'Welcome',
+          description:
+            'Welcome to the Official Website of The World of CryptoPups. Where cute, cool, beautiful and amazingly crafted puppies reside, `pups` all the way to the moon!'
+        }}
       />
 
       {/* showcase header */}
