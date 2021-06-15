@@ -2,56 +2,57 @@
 label: EventsTemplate
 hide_body: false
 fields:
-- name: event_title
-  type: text
-  config:
-    required: true
-  label: Event Title
-- name: date
-  type: datetime
-  label: Date
-  description: ''
-  config:
-    required: false
-    date_format: 
-    time_format: 
-    display_utc: false
-- name: post_date
-  type: datetime
-  description: ''
-  config:
-    required: false
-    date_format: 
-    time_format: 
-    display_utc: false
-  label: Post Date
-  default: now
-  hidden: true
-- name: image
-  type: file
-  config:
-    maxSize: 64
-  label: Image
-- name: event_type
-  type: select
-  default: []
-  config:
-    required: false
-    options:
-    - Charity
-    - Big Drop
-    - GiveAway
-    - Special
-    - Free Drop
-    - Collaboration
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Event Type
+  - name: event_title
+    type: text
+    config:
+      required: true
+    label: Event Title
+  - name: date
+    type: datetime
+    label: Date
+    description: ''
+    config:
+      required: false
+      date_format:
+      time_format:
+      display_utc: false
+  - name: post_date
+    type: datetime
+    description: ''
+    config:
+      required: false
+      date_format:
+      time_format:
+      display_utc: false
+    label: Post Date
+    default: now
+    hidden: true
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  - name: event_type
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+        - Charity
+        - Big Drop
+        - GiveAway
+        - Special
+        - Free Drop
+        - Collaboration
+      source:
+        type: simple
+        section:
+        file:
+        path:
+    label: Event Type
 pages:
-- _events/big-drop-gaze-into-the-abyss.md
-- _events/cryptopups-x-cryptoswatches-collab.md
-- _events/giveaway-mint-2-10.md
-- _events/tweety-special-for-everyone.md
+  - _events/big-drop-gaze-into-the-abyss.md
+  - _events/cryptopups-x-cryptoswatches-collab.md
+  - _events/giveaway-mint-2-10.md
+  - _events/tweety-special-for-everyone.md
+  - _events/world-of-cryptopups-pupskins.md

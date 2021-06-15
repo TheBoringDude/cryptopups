@@ -111,10 +111,23 @@ const EventsManager = (props: EventsManagerProps) => {
               Return Home
             </a>
           </Link>
+          {/* timer */}
+          {props.event.date && (
+            <p className="font-light text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider text-neonBlue text-center">
+              {timeLeft
+                ? Object.keys(timeLeft).map(
+                    (val, index) =>
+                      `${('0' + timeLeft[val]).slice(-2)}${
+                        index < Object.keys(timeLeft).length - 1 ? ' : ' : ''
+                      }`
+                  )
+                : ''}
+            </p>
+          )}
+          {/* end timer */}
           <div className="dark:bg-coolGray-700 bg-gray-100 p-4 rounded-lg my-12 w-5/6 sm:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto">
             <div className="text-center">
               <MarkdownRenderContent content={props.content} />
-              <Image src={props.event.image} height={250} width={250} />
             </div>
           </div>
         </div>
