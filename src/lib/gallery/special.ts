@@ -1,4 +1,6 @@
-export const SpecialPups = [
+import { ImagePupsProps } from './gallery';
+
+export const SpecialPups: ImagePupsProps[] = [
   {
     name: 'CryptoPups_Barbara000.jpg',
     src: '/images/SPECIALS/CryptoPups_Barbara000.jpg'

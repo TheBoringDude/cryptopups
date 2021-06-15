@@ -1,4 +1,6 @@
-export const FirstEditionPups = [
+import { ImagePupsProps } from './gallery';
+
+export const FirstEditionPups: ImagePupsProps[] = [
   {
     name: 'CryptoPups_Love002.jpg',
     src: '/images/FIRST EDITION/CryptoPups_Love002.jpg',

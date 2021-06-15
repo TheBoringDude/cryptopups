@@ -1,4 +1,6 @@
-export const CelestialPups = [
+import { ImagePupsProps } from './gallery';
+
+export const CelestialPups: ImagePupsProps[] = [
   {
     name: 'SignedCelestials-01.jpg',
     src: '/images/CELESTIAL PUPS/SignedCelestials-01.jpg'

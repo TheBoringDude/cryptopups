@@ -6,9 +6,16 @@ import { useState } from 'react';
 
 import type { ArchiveStateProps } from '@lib/archive';
 import { ArchiveButtons } from '@lib/archive';
-import { SlideColorsContext, usePupsColor, usePupsTheme } from '@lib/theme';
+import { usePupsColor } from '@lib/theme';
 
-import { SetFirstEditionPups, SetSpecialsPups, SetFantasyPups, SetCelestialPups } from './sets';
+import {
+  SetFirstEditionPups,
+  SetSpecialsPups,
+  SetFantasyPups,
+  SetCelestialPups,
+  SetVoidPups,
+  SetRoyalPups
+} from './sets';
 
 export const ArchiveTabHandler = () => {
   const [archives, setArchives] = useState<ArchiveStateProps>('first-edition');
@@ -39,6 +46,8 @@ export const ArchiveTabHandler = () => {
         {archives === 'specials' && <SetSpecialsPups />}
         {archives === 'fantasy' && <SetFantasyPups />}
         {archives === 'celestial' && <SetCelestialPups />}
+        {archives === 'void' && <SetVoidPups />}
+        {archives === 'royal' && <SetRoyalPups />}
       </div>
     </>
   );
