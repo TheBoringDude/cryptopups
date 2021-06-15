@@ -15,9 +15,12 @@ export const ArchiveGallery = ({ set }: ArchiveGalleryProps) => {
     <>
       <section className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-2 sm:gap-4 py-8">
         {ArchiveImages[set].map((image, index) => (
-          <div key={index}>
+          <div key={index} className="relative">
+            <span className="absolute -top-2 -right-2 z-50 bg-purple-500 text-white p-4">
+              {image.rating}
+            </span>
             <Image
-              className="rounded-xl"
+              className="rounded-xl z-10"
               objectFit="cover"
               src={image.src}
               alt={image.name}
