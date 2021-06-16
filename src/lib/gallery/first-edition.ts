@@ -4,21 +4,21 @@ export const FirstEditionPups: ImagePupsProps[] = [
   {
     name: 'CryptoPups_Love002.jpg',
     src: '/images/FIRST EDITION/CryptoPups_Love002.jpg',
-    rating: 'epic'
+    rarity: 'ethereal'
   },
   {
     name: 'CryptoPups_Puggy004.jpg',
     src: '/images/FIRST EDITION/CryptoPups_Puggy004.jpg',
-    rating: 'classic'
+    rarity: 'ethereal'
   },
   {
     name: 'CryptoPups_Shiba003.jpg',
     src: '/images/FIRST EDITION/CryptoPups_Shiba003.jpg',
-    rating: 'epic'
+    rarity: 'ethereal'
   },
   {
     name: 'CryptoPups_Winter001.jpg',
     src: '/images/FIRST EDITION/CryptoPups_Winter001.jpg',
-    rating: 'legendary'
+    rarity: 'ethereal'
   }
 ];
