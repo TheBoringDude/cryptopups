@@ -2,9 +2,7 @@
   This is the Index / Home page.
 */
 
-import { ArchiveTabHandler } from '@components/archive/tabs';
 import { Container } from '@components/container';
-import { EventsSection } from '@components/events';
 import { PupShow } from '@components/pupshow';
 import { SocialSection } from '@components/social';
 import { ThemeAnchorButton } from '@components/theme/anchor';
@@ -18,6 +16,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImages } from '@fortawesome/free-solid-svg-icons';
 import { NextSeo } from 'next-seo';
+import { usePupsColor } from '@lib/theme';
 
 export const getStaticProps: GetStaticProps = async () => {
   const event = getLatestEvent();
@@ -33,6 +32,8 @@ type HomeProps = {
 };
 
 export default function Home({ event }: HomeProps) {
+  const pupmode = usePupsColor();
+
   return (
     <BaseLayout event={event}>
       <NextSeo
@@ -47,13 +48,19 @@ export default function Home({ event }: HomeProps) {
 
       {/* showcase header */}
       <Container className="py-20 px-4 lg:px-8">
-        <section className="grid grid-cols-1 2md:grid-cols-5 items-center">
-          <div className="col-span-1 2md:col-span-3 text-center 2md:text-left">
-            <h1 className="2md:text-left text-4xl xs:text-5xl md:text-6xl xl:text-7xl font-black text-coolGray-700 dark:text-white">
-              Welcome to{' '}
-              <span className="text-5xl md:text-7xl xl:text-8xl underline">cryptopups</span>!
+        <section className="text-center">
+          <div className="w-11/12 sm:w-5/6 lg:w-4/5 xl:w-3/4 mx-auto">
+            <h1 className="text-3xl xs:text-4xl md:text-5xl xl:text-6xl font-black text-coolGray-700 dark:text-white">
+              Welcome to <br className="my-3" />
+              <span
+                className={`text-5xl md:text-6xl xl:text-7xl underline tracking-tight ${
+                  pupmode?.text && pupmode.text
+                }`}
+              >
+                World of CryptoPups
+              </span>
             </h1>
-            <p className="text-xl lg:text-2xl tracking-wide mt-8 text-coolGray-500 dark:text-gray-100">
+            <p className="text-2xl tracking-wide mt-8 text-coolGray-500 dark:text-gray-100">
               Where cute, cool, beautiful and amazingly crafted puppies reside,{' '}
               <span className="font-black">`pups`</span> all the way to the moon!
             </p>
@@ -65,7 +72,10 @@ export default function Home({ event }: HomeProps) {
                   className="m-2 py-3 2md:py-4 px-6 2md:px-8 rounded-lg bg-coolGray-600 hover:bg-coolGray-700 text-gray-100 text-lg md:text-xl font-bold tracking-wide inline-flex items-center justify-center"
                   title="View Archive"
                 >
-                  <FontAwesomeIcon icon={faImages} className="mr-2 text-3xl" />
+                  <FontAwesomeIcon
+                    icon={faImages}
+                    className="mr-2 text-xl md:text-2xl xl:text-3xl"
+                  />
                   Archive
                 </a>
               </Link>
@@ -74,7 +84,7 @@ export default function Home({ event }: HomeProps) {
                 title="Join Telegram Clubhouse"
                 className="m-2 py-3 2md:py-4 px-6 2md:px-8 rounded-lg text-gray-100 text-lg md:text-xl font-bold tracking-wide inline-flex items-center justify-center"
               >
-                <span className="text-3xl mr-2">{TELEGRAM_LINK.icon}</span>
+                <span className="mr-2 text-xl md:text-2xl xl:text-3xl">{TELEGRAM_LINK.icon}</span>
                 clubhouse
               </ThemeAnchorButton>
             </div>
