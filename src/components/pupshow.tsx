@@ -1,6 +1,12 @@
 import Image from 'next/image';
 
 import { SlideColorsContext, usePupsTheme } from '@lib/theme';
+import blue from '../../public/images/featured/blue.png';
+import green from '../../public/images/featured/green.png';
+import yellow from '../../public/images/featured/yellow.png';
+import orange from '../../public/images/featured/orange.png';
+import purple from '../../public/images/featured/purple.png';
+import rose from '../../public/images/featured/rose.png';
 
 export const PupShow = () => {
   const { pupmode, togglePupMode } = usePupsTheme();
@@ -25,17 +31,17 @@ export const PupShow = () => {
       </ul>
       {/* it preloads the images this way and much faster? */}
       {pupmode === 'blue' ? (
-        <Image src="/images/featured/blue.png" className="rounded-lg" height={550} width={550} />
+        <Image src={blue} placeholder="blur" className="rounded-lg" height={550} width={550} />
       ) : pupmode === 'green' ? (
-        <Image src="/images/featured/green.png" className="rounded-lg" height={550} width={550} />
+        <Image src={green} placeholder="blur" className="rounded-lg" height={550} width={550} />
       ) : pupmode === 'purple' ? (
-        <Image src="/images/featured/purple.png" className="rounded-lg" height={550} width={550} />
+        <Image src={purple} placeholder="blur" className="rounded-lg" height={550} width={550} />
       ) : pupmode === 'yellow' ? (
-        <Image src="/images/featured/yellow.png" className="rounded-lg" height={550} width={550} />
+        <Image src={yellow} placeholder="blur" className="rounded-lg" height={550} width={550} />
       ) : pupmode === 'orange' ? (
-        <Image src="/images/featured/orange.png" className="rounded-lg" height={550} width={550} />
+        <Image src={orange} placeholder="blur" className="rounded-lg" height={550} width={550} />
       ) : pupmode === 'rose' ? (
-        <Image src="/images/featured/rose.png" className="rounded-lg" height={550} width={550} />
+        <Image src={rose} placeholder="blur" className="rounded-lg" height={550} width={550} />
       ) : null}
     </div>
   );
