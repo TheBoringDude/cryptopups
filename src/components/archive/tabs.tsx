@@ -23,7 +23,7 @@ export const ArchiveTabHandler = () => {
 
   return (
     <>
-      <div className="w-2/3 md:w-4/5 xl:w-1/2 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 items-center mt-8">
+      <div className="w-2/3 md:w-4/5 xl:w-1/2 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 items-center mt-8">
         {ArchiveButtons.map((button, index) => (
           <button
             key={index}
@@ -32,7 +32,7 @@ export const ArchiveTabHandler = () => {
             }}
             className={`${
               button.key == archives ? `${pupmode?.button.base}` : 'bg-coolGray-600'
-            } py-2 px-6 md:px-8 text-gray-100 rounded-lg font-bold tracking-wide ${
+            } py-2 px-6 xl:px-8 text-gray-100 rounded-lg font-bold tracking-wide ${
               pupmode?.button.hover
             }`}
           >

@@ -35,7 +35,9 @@ const ArchivePage = ({ event }: ArchiveProps) => {
           <h2 className="text-center font-black text-coolGray-700 dark:text-white text-5xl leading-relaxed">
             Pups! Archive
           </h2>
-          <p className="text-xl tracking-wide text-gray-600">Look at these cute pups...</p>
+          <p className="text-xl tracking-wide text-gray-600 dark:text-gray-300">
+            Look at these cute pups...
+          </p>
           <ArchiveTabHandler />
         </Container>
 
