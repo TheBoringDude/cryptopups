@@ -18,6 +18,8 @@ import { faImages } from '@fortawesome/free-solid-svg-icons';
 import { NextSeo } from 'next-seo';
 import { usePupsColor } from '@lib/theme';
 
+import featuredImage from '../../public/images/featured-white.png';
+
 export const getStaticProps: GetStaticProps = async () => {
   const event = getLatestEvent();
 
@@ -90,7 +92,7 @@ export default function Home({ event }: HomeProps) {
             </div>
           </div>
           <div className="col-span-1 2md:col-span-2 w-5/6 sm:w-2/3 mx-auto 2md:w-auto">
-            <Image src="/images/featured-white.png" height={500} width={500} />
+            <Image src={featuredImage} placeholder="blur" height={500} width={500} />
           </div>
         </section>
       </Container>
