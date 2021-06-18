@@ -54,12 +54,12 @@ const ArchivePage = ({ event }: ArchiveProps) => {
               </a>{' '}
               by{' '}
               <a
-                className="hover:underline"
+                className="hover:underline font-bold"
                 rel="cc:attributionURL dct:creator"
                 property="cc:attributionName"
                 href="https://www.instagram.com/apppllleee_pie/"
               >
-                Adrich Laceste
+                apppllleee_pie
               </a>{' '}
               is licensed under{' '}
               <a
@@ -68,7 +68,7 @@ const ArchivePage = ({ event }: ArchiveProps) => {
                 rel="license noopener noreferrer"
               >
                 Attribution-NonCommercial 4.0 International
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center mt-2">
                   <img
                     className="h-6 w-6 mx-1"
                     src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
@@ -85,10 +85,6 @@ const ArchivePage = ({ event }: ArchiveProps) => {
               </a>
             </p>
           </div>
-          <p className="mt-2">
-            NOTE: If you have bought one of the products (artwork) above, you can ignore this
-            license for the product.
-          </p>
         </div>
       </section>
     </BaseLayout>
