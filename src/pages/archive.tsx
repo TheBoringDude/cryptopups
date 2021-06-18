@@ -43,47 +43,45 @@ const ArchivePage = ({ event }: ArchiveProps) => {
 
         <div className="text-gray-700 dark:text-white text-center mt-8">
           <div>
-            <p>
-              <a
-                className="hover:underline"
-                property="dct:title"
-                rel="cc:attributionURL"
-                href="https://www.cryptopups.cf/"
-              >
-                Cryptopups
-              </a>{' '}
-              by{' '}
-              <a
-                className="hover:underline font-bold"
-                rel="cc:attributionURL dct:creator"
-                property="cc:attributionName"
-                href="https://www.instagram.com/apppllleee_pie/"
-              >
-                apppllleee_pie
-              </a>{' '}
-              is licensed under{' '}
-              <a
-                href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1"
-                target="_blank"
-                rel="license noopener noreferrer"
-              >
-                Attribution-NonCommercial 4.0 International
-                <div className="flex items-center justify-center mt-2">
-                  <img
-                    className="h-6 w-6 mx-1"
-                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
-                  />
-                  <img
-                    className="h-6 w-6 mx-1"
-                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
-                  />
-                  <img
-                    className="h-6 w-6 mx-1"
-                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
-                  />
-                </div>
-              </a>
-            </p>
+            <a
+              className="hover:underline"
+              property="dct:title"
+              rel="cc:attributionURL"
+              href="https://www.cryptopups.cf/"
+            >
+              Cryptopups
+            </a>{' '}
+            by{' '}
+            <a
+              className="hover:underline font-bold"
+              rel="cc:attributionURL dct:creator"
+              property="cc:attributionName"
+              href="https://www.instagram.com/apppllleee_pie/"
+            >
+              apppllleee_pie
+            </a>{' '}
+            is licensed under{' '}
+            <a
+              href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1"
+              target="_blank"
+              rel="license noopener noreferrer"
+            >
+              Attribution-NonCommercial 4.0 International
+              <div className="flex items-center justify-center mt-2">
+                <img
+                  className="h-6 w-6 mx-1"
+                  src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+                />
+                <img
+                  className="h-6 w-6 mx-1"
+                  src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+                />
+                <img
+                  className="h-6 w-6 mx-1"
+                  src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
+                />
+              </div>
+            </a>
           </div>
         </div>
       </section>

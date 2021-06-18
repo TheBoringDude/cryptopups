@@ -1,20 +1,16 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { MarkdownRenderContent } from '@components/content/markdown-content';
-import { RenderContent } from '@components/content/render-content';
-import { BaseLayout } from '@layouts/base';
 import { getAllEvents, getEventBySlug, getLatestEvent } from '@lib/events/events';
 import { EventProps } from '@lib/events/types';
 import { markdownToHtml } from '@lib/markdown';
-import { usePupsColor } from '@lib/theme';
 import { array_string } from '@utils/etc';
 import { json } from '@utils/json';
 import { EventLayout } from '@layouts/eventLayout';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CalculateEventTime } from '@lib/events/event-time';
-import { useState, useEffect } from 'react';
 import { useHasMounted } from '@lib/useHasMounted';
 import { NextSeo } from 'next-seo';
+import EventTimer from '@components/event-timer';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const event = getEventBySlug(array_string(context.params.slug));
@@ -55,17 +51,6 @@ type EventsManagerProps = {
 
 const EventsManager = (props: EventsManagerProps) => {
   const mounted = useHasMounted();
-  const pupmode = usePupsColor();
-
-  const [timeLeft, setTimeLeft] = useState(CalculateEventTime(props.event.date));
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setTimeLeft(CalculateEventTime(props.event.date));
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  });
 
   if (!mounted) return null;
 
@@ -82,17 +67,10 @@ const EventsManager = (props: EventsManagerProps) => {
 
       {props.event.event_type === 'Big Drop' ? (
         <div className="relative h-screen w-full">
-          {/* timer */}
-          <p className="font-light text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider absolute z-20 top-24 inset-x-0 text-neonBlue text-center">
-            {timeLeft
-              ? Object.keys(timeLeft).map(
-                  (val, index) =>
-                    `${('0' + timeLeft[val]).slice(-2)}${
-                      index < Object.keys(timeLeft).length - 1 ? ' : ' : ''
-                    }`
-                )
-              : 'EVENT IS OVER!'}
-          </p>
+          <EventTimer
+            date={props.event.date}
+            className="font-light text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider absolute z-20 top-24 inset-x-0 text-neonBlue text-center"
+          />
           {/* end timer */}
           <Link href="/">
             <a
@@ -111,19 +89,10 @@ const EventsManager = (props: EventsManagerProps) => {
               Return Home
             </a>
           </Link>
-          {/* timer */}
-          {props.event.date && (
-            <p className="font-light text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider text-neonBlue text-center">
-              {timeLeft
-                ? Object.keys(timeLeft).map(
-                    (val, index) =>
-                      `${('0' + timeLeft[val]).slice(-2)}${
-                        index < Object.keys(timeLeft).length - 1 ? ' : ' : ''
-                      }`
-                  )
-                : ''}
-            </p>
-          )}
+          <EventTimer
+            date={props.event?.date}
+            className="font-light text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider text-neonBlue text-center"
+          />
           {/* end timer */}
           <div className="dark:bg-coolGray-700 bg-gray-100 p-4 rounded-lg my-12 w-5/6 sm:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto">
             <div className="text-center">
