@@ -20,7 +20,8 @@ module.exports = {
       neonBlue: '#04d9ff'
     },
     fontFamily: {
-      sans: ['"Nunito"', 'sans-serif']
+      sans: ['"Nunito"', 'sans-serif'],
+      cursive: ['"Baloo Tammudu 2"', 'cursive']
     },
     extend: {
       scale: ['group-hover']
