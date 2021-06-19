@@ -9,7 +9,7 @@ export const MarkdownRenderContent = ({ content }: MarkdownContentProps) => {
   return (
     <div
       id="markdown-render"
-      className={`prose md:prose-lg lg:prose-xl ${pupmode?.prose} max-w-full`}
+      className={`prose md:prose-lg lg:prose-xl ${pupmode?.prose} max-w-full font-alt`}
     >
       <article dangerouslySetInnerHTML={{ __html: content }}></article>
     </div>

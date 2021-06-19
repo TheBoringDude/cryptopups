@@ -2,12 +2,15 @@
   Main navbar / menu section.
 */
 
+import { usePupsColor } from '@modules/theme/theme';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BuyNowBtn } from './buy-now';
 import { Container } from './container';
 
 export const Navigation = () => {
+  const pupmode = usePupsColor();
+
   return (
     <Container>
       <nav className="py-4 flex flex-col sm:flex-row items-center justify-between">
@@ -17,12 +20,16 @@ export const Navigation = () => {
           </a>
         </Link>
 
-        <ul className="inline-flex items-center text-coolGray-700 dark:text-white">
+        <ul className="inline-flex items-center text-coolGray-700 dark:text-white font-alt">
           <li className="mx-3 sm:ml-8">
-            <a href="/archive">Gallery</a>
+            <a className={`tracking-wider ${pupmode?.linkHover}`} href="/archive">
+              Gallery
+            </a>
           </li>
           <li className="mx-3 sm:ml-8">
-            <a href="/blog">Blog</a>
+            <a className={`tracking-wider ${pupmode?.linkHover}`} href="/blog">
+              Blog
+            </a>
           </li>
           <li className="mx-3 sm:ml-8">
             <BuyNowBtn />

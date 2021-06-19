@@ -64,7 +64,7 @@ const BlogPage = ({ blogs, event }: AllBlogStaticProps) => {
                   } bg-coolGray-700 dark:bg-coolGray-800`}
                 >
                   <h3
-                    className={`${pupmode?.color} text-2xl text-gray-100 font-extrabold py-3 pl-4 rounded-tr-md`}
+                    className={`${pupmode?.color} text-2xl text-gray-100 font-bold font-alt tracking-wider py-3 pl-4 rounded-tr-md`}
                   >
                     {blog.title}
                   </h3>

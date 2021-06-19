@@ -21,7 +21,8 @@ module.exports = {
     },
     fontFamily: {
       sans: ['"Nunito"', 'sans-serif'],
-      cursive: ['"Baloo Tammudu 2"', 'cursive']
+      cursive: ['"Baloo Tammudu 2"', 'cursive'],
+      alt: ['"PT Sans"', 'sans-serif']
     },
     extend: {
       scale: ['group-hover']

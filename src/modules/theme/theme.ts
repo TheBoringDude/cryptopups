@@ -6,6 +6,7 @@ type PupsModeColors = 'blue' | 'green' | 'purple' | 'white' | 'yellow' | 'orange
 type SlidePupColorProps = {
   color: string;
   text: string;
+  linkHover: string;
   textHover: string;
   button: {
     base: string;
@@ -22,6 +23,7 @@ const SlideColorsContext: SlideMap = {
   blue: {
     color: 'bg-blue-500',
     text: 'text-blue-500',
+    linkHover: 'hover:text-blue-500',
     textHover: 'hover:text-blue-600',
     button: {
       base: 'bg-blue-500',
@@ -34,6 +36,7 @@ const SlideColorsContext: SlideMap = {
   green: {
     color: 'bg-green-500',
     text: 'text-green-500',
+    linkHover: 'hover:text-green-500',
     textHover: 'hover:text-green-600',
     button: {
       base: 'bg-green-500',
@@ -46,6 +49,7 @@ const SlideColorsContext: SlideMap = {
   purple: {
     color: 'bg-purple-500',
     text: 'text-purple-500',
+    linkHover: 'hover:text-purple-500',
     textHover: 'hover:text-purple-600',
     button: {
       base: 'bg-purple-500',
@@ -58,6 +62,7 @@ const SlideColorsContext: SlideMap = {
   yellow: {
     color: 'bg-yellow-500',
     text: 'text-yellow-500',
+    linkHover: 'hover:text-yellow-500',
     textHover: 'hover:text-yellow-600',
     button: {
       base: 'bg-yellow-500',
@@ -70,6 +75,7 @@ const SlideColorsContext: SlideMap = {
   orange: {
     color: 'bg-orange-500',
     text: 'text-orange-500',
+    linkHover: 'hover:text-orange-500',
     textHover: 'hover:text-orange-600',
     button: {
       base: 'bg-orange-500',
@@ -82,6 +88,7 @@ const SlideColorsContext: SlideMap = {
   rose: {
     color: 'bg-rose-500',
     text: 'text-rose-500',
+    linkHover: 'hover:text-rose-500',
     textHover: 'hover:text-rose-600',
     button: {
       base: 'bg-rose-500',

@@ -9,7 +9,7 @@ export const BuyNowBtn = () => {
       href="https://wax.atomichub.io/market?collection_name=cryptopuppie&order=desc&sort=created&symbol=WAX"
     >
       <FontAwesomeIcon className="mr-2" icon={faCartArrowDown} />
-      <span className="hidden xs:block font-bold text-gray-100">Buy Now</span>
+      <span className="hidden xs:block font-bold text-white">Buy Now</span>
     </ThemeAnchorButton>
   );
 };

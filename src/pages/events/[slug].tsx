@@ -69,7 +69,7 @@ const EventsManager = (props: EventsManagerProps) => {
         <div className="relative h-screen w-full">
           <EventTimer
             date={props.event.date}
-            className="font-light text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider absolute z-20 top-24 inset-x-0 text-neonBlue text-center"
+            className="font-extrabold text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider absolute z-20 top-24 inset-x-0 text-neonBlue text-center"
           />
           {/* end timer */}
           <Link href="/">
@@ -91,7 +91,7 @@ const EventsManager = (props: EventsManagerProps) => {
           </Link>
           <EventTimer
             date={props.event?.date}
-            className="font-light text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider text-neonBlue text-center"
+            className="font-extrabold text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider text-neonBlue text-center"
           />
           {/* end timer */}
           <div className="dark:bg-coolGray-700 bg-gray-100 p-4 rounded-lg my-12 w-5/6 sm:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto">

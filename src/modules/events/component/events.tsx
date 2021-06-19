@@ -19,10 +19,10 @@ const EventsSection = ({ event }: EventsSectionProps) => {
         >
           <div className="flex items-center">
             <Image src={event.image} height={45} width={80} className="object-cover" />
-            <p className="text-white ml-4 font-bold tracking-wider">{event.event_title}</p>
+            <p className="text-white ml-4 font-bold tracking-wider font-alt">{event.event_title}</p>
           </div>
           <EventTimer
-            className="text-2xl font-black tracking-wider text-white mt-4 md:mt-0"
+            className="text-2xl font-extrabold tracking-wider text-white mt-4 md:mt-0"
             date={event?.date}
           />
         </section>
