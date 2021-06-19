@@ -1,6 +1,6 @@
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ThemeAnchorButton } from './theme/anchor';
+import { ThemeAnchorButton } from '@modules/theme/anchor';
 
 export const BuyNowBtn = () => {
   return (

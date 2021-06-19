@@ -5,10 +5,10 @@
 import { Container } from '@components/container';
 import { PupShow } from '@components/pupshow';
 import { SocialSection } from '@components/social';
-import { ThemeAnchorButton } from '@components/theme/anchor';
+import { ThemeAnchorButton } from '@modules/theme/anchor';
 import { BaseLayout } from '@layouts/base';
-import { getLatestEvent } from '@lib/events/events';
-import { EventProps } from '@lib/events/types';
+import { getLatestEvent } from '@modules/events/events';
+import { EventProps } from '@modules/events/types';
 import { GetStaticProps } from 'next';
 import { TELEGRAM_LINK } from '@utils/socialMedia';
 import Image from 'next/image';
@@ -16,7 +16,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImages } from '@fortawesome/free-solid-svg-icons';
 import { NextSeo } from 'next-seo';
-import { usePupsColor } from '@lib/theme';
+import { usePupsColor } from '@modules/theme/theme';
 
 import featuredImage from '../../public/images/featured-white.png';
 

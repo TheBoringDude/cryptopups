@@ -1,4 +1,4 @@
-import { usePupsColor } from './theme';
+import { usePupsColor } from '@modules/theme/theme';
 
 const THEME_BUTTON = () => {
   const pupmode = usePupsColor();

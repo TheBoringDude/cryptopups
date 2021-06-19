@@ -1,8 +1,8 @@
-import { ArchiveTabHandler } from '@components/archive/tabs';
+import { ArchiveTabHandler } from '@modules/archive/component/tabs';
 import { Container } from '@components/container';
 import { BaseLayout } from '@layouts/base';
-import { getLatestEvent } from '@lib/events/events';
-import { EventProps } from '@lib/events/types';
+import { getLatestEvent } from '@modules/events/events';
+import { EventProps } from '@modules/events/types';
 import { GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
 

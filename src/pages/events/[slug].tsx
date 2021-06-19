@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { MarkdownRenderContent } from '@components/content/markdown-content';
-import { getAllEvents, getEventBySlug, getLatestEvent } from '@lib/events/events';
-import { EventProps } from '@lib/events/types';
+import { getAllEvents, getEventBySlug, getLatestEvent } from '@modules/events/events';
+import { EventProps } from '@modules/events/types';
 import { markdownToHtml } from '@lib/markdown';
 import { array_string } from '@utils/etc';
 import { json } from '@utils/json';
@@ -10,7 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useHasMounted } from '@lib/useHasMounted';
 import { NextSeo } from 'next-seo';
-import EventTimer from '@components/event-timer';
+import EventTimer from '@modules/events/component/event-timer';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const event = getEventBySlug(array_string(context.params.slug));

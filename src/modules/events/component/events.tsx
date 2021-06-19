@@ -1,8 +1,8 @@
-import { EventProps } from '@lib/events/types';
-import { usePupsColor } from '@lib/theme';
+import { EventProps } from '../types';
+import { usePupsColor } from '../../theme/theme';
 import Image from 'next/image';
 import Link from 'next/link';
-import EventTimer from './event-timer'
+import EventTimer from './event-timer';
 
 type EventsSectionProps = {
   event: EventProps;

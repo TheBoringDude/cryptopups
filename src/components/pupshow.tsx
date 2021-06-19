@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { SlideColorsContext, usePupsTheme } from '@lib/theme';
+import { SlideColorsContext, usePupsTheme } from '@modules/theme/theme';
 import blue from '../../public/images/featured/blue.png';
 import green from '../../public/images/featured/green.png';
 import yellow from '../../public/images/featured/yellow.png';

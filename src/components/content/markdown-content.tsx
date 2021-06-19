@@ -1,4 +1,4 @@
-import { usePupsColor } from '@lib/theme';
+import { usePupsColor } from '@modules/theme/theme';
 
 type MarkdownContentProps = {
   content: string;

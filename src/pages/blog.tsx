@@ -1,14 +1,14 @@
 import { BaseLayout } from '@layouts/base';
 
 import { Container } from '@components/container';
-import { usePupsColor } from '@lib/theme';
-import { ThemeLinkButton } from '@components/theme/buttons';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import { getAllBlogs } from '@lib/blog/blogs';
-import { BlogDataProps } from '@lib/blog/types';
+import { usePupsColor } from '@modules/theme/theme';
+import { ThemeLinkButton } from '@modules/theme/buttons';
+import { GetStaticProps } from 'next';
+import { getAllBlogs } from '@modules/blog/blogs';
+import { BlogDataProps } from '@modules/blog/types';
 import { json } from '@utils/json';
-import { getLatestEvent } from '@lib/events/events';
-import { EventProps } from '@lib/events/types';
+import { getLatestEvent } from '@modules/events/events';
+import { EventProps } from '@modules/events/types';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
 

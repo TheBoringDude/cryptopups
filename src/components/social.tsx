@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { socialIcons } from '@utils/socialMedia';
-import { ThemeAnchorText } from './theme/anchor';
+import { ThemeAnchorText } from '@modules/theme/anchor';
 
 export const SocialSection = () => {
   return (

@@ -4,8 +4,8 @@
 
 import Image from 'next/image';
 
-import { ArchiveImages, ArchiveStateProps } from '@lib/archive';
-import { ImageRatings } from '@lib/gallery/gallery';
+import { ArchiveImages, ArchiveStateProps } from '../archive';
+import { ImageRatings } from '@modules/archive/gallery/gallery';
 
 type ArchiveGalleryProps = {
   set: ArchiveStateProps;

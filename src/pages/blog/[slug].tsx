@@ -1,15 +1,15 @@
-import { getAllBlogs, getBlogBySlug } from '@lib/blog/blogs';
-import { BlogDataProps } from '@lib/blog/types';
+import { getAllBlogs, getBlogBySlug } from '@modules/blog/blogs';
+import { BlogDataProps } from '@modules/blog/types';
 import { markdownToHtml } from '@lib/markdown';
 import { MarkdownRenderContent } from '@components/content/markdown-content';
-import { usePupsColor } from '@lib/theme';
+import { usePupsColor } from '@modules/theme/theme';
 import { BaseLayout } from '@layouts/base';
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { json } from '@utils/json';
 import { array_string } from '@utils/etc';
 import { RenderContent } from '@components/content/render-content';
-import { getLatestEvent } from '@lib/events/events';
-import { EventProps } from '@lib/events/types';
+import { getLatestEvent } from '@modules/events/events';
+import { EventProps } from '@modules/events/types';
 import { NextSeo } from 'next-seo';
 
 export const getStaticProps: GetStaticProps = async (context) => {

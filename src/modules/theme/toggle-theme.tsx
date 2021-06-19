@@ -1,6 +1,6 @@
-import { useTheme } from '@lib/theme';
+import { useTheme } from './theme';
 import { useEffect, useState } from 'react';
-import { ThemeButton } from './theme/buttons';
+import { ThemeButton } from './buttons';
 
 const SunIcon = () => {
   return (

@@ -4,7 +4,7 @@
 
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-import { usePupsColor } from '@lib/theme';
+import { usePupsColor } from './theme';
 import { LinkButton, LinkButtonProps } from '@components/LinkButton';
 
 interface ThemeButtonProps extends ButtonHTMLAttributes<HTMLElement> {

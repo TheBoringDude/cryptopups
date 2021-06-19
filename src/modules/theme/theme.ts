@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { PupsThemeContext } from './pupsThemeContext';
+import { PupsThemeContext } from '@lib/pupsThemeContext';
 
 type PupsModeColors = 'blue' | 'green' | 'purple' | 'white' | 'yellow' | 'orange' | 'rose';
 

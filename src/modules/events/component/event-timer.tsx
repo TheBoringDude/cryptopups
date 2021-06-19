@@ -1,4 +1,4 @@
-import { CalculateEventTime } from '@lib/events/event-time';
+import { CalculateEventTime } from '../event-time';
 import { useHasMounted } from '@lib/useHasMounted';
 import { useEffect, useState } from 'react';
 

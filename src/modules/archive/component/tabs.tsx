@@ -4,9 +4,9 @@
 
 import { useState } from 'react';
 
-import type { ArchiveStateProps } from '@lib/archive';
-import { ArchiveButtons } from '@lib/archive';
-import { usePupsColor } from '@lib/theme';
+import type { ArchiveStateProps } from '../archive';
+import { ArchiveButtons } from '../archive';
+import { usePupsColor } from '@modules/theme/theme';
 
 import {
   SetFirstEditionPups,

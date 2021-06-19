@@ -4,8 +4,8 @@ import DefaultLayout from '@layouts/default';
 
 import { Navigation } from '@components/nav';
 import { Footer } from '@components/footer';
-import { EventsSection } from '@components/events';
-import { EventProps } from '@lib/events/types';
+import { EventsSection } from '@modules/events/component/events';
+import { EventProps } from '@modules/events/types';
 
 type BaseLayoutProps = {
   children: ReactNode;
