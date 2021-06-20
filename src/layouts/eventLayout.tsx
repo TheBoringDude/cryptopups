@@ -1,4 +1,4 @@
-import { EventsSection } from '@modules/events/component/events';
+import { EventsSection } from '@modules/events/component/events-section';
 import { EventProps } from '@modules/events/types';
 import { ReactNode } from 'react';
 import DefaultLayout from './default';

@@ -4,7 +4,7 @@ import DefaultLayout from '@layouts/default';
 
 import { Navigation } from '@components/nav';
 import { Footer } from '@components/footer';
-import { EventsSection } from '@modules/events/component/events';
+import { EventsSection } from '@modules/events/component/events-section';
 import { EventProps } from '@modules/events/types';
 
 type BaseLayoutProps = {

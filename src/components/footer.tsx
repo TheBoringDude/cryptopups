@@ -14,7 +14,7 @@ export const Footer = () => {
       <div className="flex flex-col 2md:flex-row items-center justify-between mb-4">
         <Link href="/">
           <a>
-            <Image src="/logo.png" height={25} width={115} />
+            <Image alt="World of CryptoPups Logo" src="/logo.png" height={25} width={115} />
           </a>
         </Link>
         <div className="inline-flex items-center">
@@ -30,12 +30,12 @@ export const Footer = () => {
         {/* just some external links */}
         <ul className="text-gray-200 text-center 2md:text-left">
           <li>
-            <a className="hover:underline" href="https://notiriscreations.cf">
+            <a className="hover:underline my-1" href="https://notiriscreations.cf">
               Iris Designs
             </a>
           </li>
           <li>
-            <a className="hover:underline" href="https://fleur-delights.vercel.app/">
+            <a className="hover:underline my-1" href="https://fleur-delights.vercel.app/">
               Fleur Delights
             </a>
           </li>
