@@ -55,7 +55,7 @@ export default function Home({ event }: HomeProps) {
             <h1 className="text-3xl xs:text-4xl md:text-5xl xl:text-6xl font-black text-coolGray-700 dark:text-white">
               Welcome to
               <span
-                className={`block mt-8 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl underline tracking-tight font-cursive ${
+                className={`block mt-8 text-5xl xs:text-6xl md:text-7xl xl:text-8xl underline tracking-tight font-cursive ${
                   pupmode?.text && pupmode.text
                 }`}
               >
@@ -92,7 +92,13 @@ export default function Home({ event }: HomeProps) {
             </div>
           </div>
           <div className="col-span-1 2md:col-span-2 w-5/6 sm:w-2/3 mx-auto 2md:w-auto">
-            <Image src={featuredImage} placeholder="blur" height={500} width={500} />
+            <Image
+              src={featuredImage}
+              alt="World of CryptoPups - Rainbow Pup!"
+              placeholder="blur"
+              height={500}
+              width={500}
+            />
           </div>
         </section>
       </Container>

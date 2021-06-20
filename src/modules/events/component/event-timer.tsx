@@ -22,7 +22,7 @@ const EventTimer = ({ className, date }: EventTimerProps) => {
   if (!mounted) return <></>;
 
   return (
-    <p className={`${className} font-cursive`}>
+    <p className={`${className} font-alt`}>
       {timeLeft
         ? Object.keys(timeLeft).map(
             (val, index) =>

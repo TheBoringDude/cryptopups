@@ -31,17 +31,59 @@ export const PupShow = () => {
       </ul>
       {/* it preloads the images this way and much faster? */}
       {pupmode === 'blue' ? (
-        <Image src={blue} placeholder="blur" className="rounded-lg" height={550} width={550} />
+        <Image
+          src={blue}
+          alt="Rainbow Pup - Blue"
+          placeholder="blur"
+          className="rounded-lg"
+          height={550}
+          width={550}
+        />
       ) : pupmode === 'green' ? (
-        <Image src={green} placeholder="blur" className="rounded-lg" height={550} width={550} />
+        <Image
+          src={green}
+          alt="Rainbow Pup - Green"
+          placeholder="blur"
+          className="rounded-lg"
+          height={550}
+          width={550}
+        />
       ) : pupmode === 'purple' ? (
-        <Image src={purple} placeholder="blur" className="rounded-lg" height={550} width={550} />
+        <Image
+          src={purple}
+          alt="Rainbow Pup - Purple"
+          placeholder="blur"
+          className="rounded-lg"
+          height={550}
+          width={550}
+        />
       ) : pupmode === 'yellow' ? (
-        <Image src={yellow} placeholder="blur" className="rounded-lg" height={550} width={550} />
+        <Image
+          src={yellow}
+          alt="Rainbow Pup - Yellow"
+          placeholder="blur"
+          className="rounded-lg"
+          height={550}
+          width={550}
+        />
       ) : pupmode === 'orange' ? (
-        <Image src={orange} placeholder="blur" className="rounded-lg" height={550} width={550} />
+        <Image
+          src={orange}
+          alt="Rainbow Pup - Orange"
+          placeholder="blur"
+          className="rounded-lg"
+          height={550}
+          width={550}
+        />
       ) : pupmode === 'rose' ? (
-        <Image src={rose} placeholder="blur" className="rounded-lg" height={550} width={550} />
+        <Image
+          src={rose}
+          alt="Rainbow Pup - Rose"
+          placeholder="blur"
+          className="rounded-lg"
+          height={550}
+          width={550}
+        />
       ) : null}
     </div>
   );

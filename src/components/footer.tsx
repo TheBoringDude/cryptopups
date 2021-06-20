@@ -10,8 +10,8 @@ import { ToggleThemeButton } from '@modules/theme/toggle-theme';
 
 export const Footer = () => {
   return (
-    <Container>
-      <div className="flex flex-col 2md:flex-row items-center justify-between">
+    <Container className="text-center 2md:text-left font-alt">
+      <div className="flex flex-col 2md:flex-row items-center justify-between mb-4">
         <Link href="/">
           <a>
             <Image src="/logo.png" height={25} width={115} />
@@ -41,7 +41,7 @@ export const Footer = () => {
           </li>
         </ul>
       </div>
-      <small className="text-left text-white">
+      <small className="text-white mt-10 2md:mt-0 tracking-wide">
         Website designed by{' '}
         <a href="https://github.com/TheBoringDude/" rel="noreferrer">
           TheBoringDude

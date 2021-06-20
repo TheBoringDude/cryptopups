@@ -55,6 +55,7 @@ const ArchivePage = ({ event }: ArchiveProps) => {
             <a
               className="hover:underline font-bold"
               rel="cc:attributionURL dct:creator"
+              target="_blank"
               property="cc:attributionName"
               href="https://www.instagram.com/apppllleee_pie/"
             >
