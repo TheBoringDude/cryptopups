@@ -62,9 +62,9 @@ const BlogManager = ({ blog, content, event }: BlogManagerProps) => {
         }}
       />
 
-      <RenderContent>
+      <RenderContent className="dark:bg-gray-800">
         <h2 className={`text-5xl font-black tracking-wide ${pupmode?.text}`}>{blog.title}</h2>
-        <div className="my-2 p-2 bg-gray-800 tracking-wide rounded-md flex flex-col sm:flex-row items-center justify-between">
+        <div className="my-2 p-2 bg-gray-900 tracking-wide rounded-md flex flex-col sm:flex-row items-center justify-between">
           <h4 className="text-gray-200">@Adrich Laceste</h4>
           <p className="text-sm text-gray-300 font-light">{new Date(blog.date).toUTCString()}</p>
         </div>
