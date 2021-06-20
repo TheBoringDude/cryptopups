@@ -10,7 +10,7 @@ event_type: Special
 
 ### UR FAVE CREATORS ARE COMING
 
-#### PROMO DOP: [https://wax.atomichub.io/drops/60575+60579+60581](https://wax.atomichub.io/drops/60575+60579+60581)
+#### [PROMO DOP](https://wax.atomichub.io/drops/60575+60579+60581)
 
 ![](/blog/media/pupskinsevent-1.jpg)
 ![](/blog/media/pupskinsevent-2.jpg)

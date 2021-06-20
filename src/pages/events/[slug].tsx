@@ -91,10 +91,10 @@ const EventsManager = (props: EventsManagerProps) => {
           </Link>
           <EventTimer
             date={props.event?.date}
-            className="font-extrabold text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider text-neonBlue text-center"
+            className="font-extrabold text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider text-neonBlue text-center mt-4"
           />
           {/* end timer */}
-          <div className="dark:bg-coolGray-700 bg-gray-100 p-4 rounded-lg my-12 w-5/6 sm:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto">
+          <div className="dark:bg-coolGray-700 bg-gray-100 p-4 rounded-lg my-12 w-11/12 sm:w-5/6 md:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto">
             <div className="text-center">
               <MarkdownRenderContent content={props.content} />
             </div>

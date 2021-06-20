@@ -9,10 +9,10 @@ export const SocialSection = () => {
       <ul className="inline-flex items-center justify-center">
         {socialIcons.map((social, index) => (
           <li key={index} className="mx-1">
-            <ThemeAnchorText className="group text-4xl" href={social.link}>
+            <ThemeAnchorText className="group text-3xl" href={social.link}>
               <FontAwesomeIcon
                 icon={social.icon}
-                className="transform group-hover:scale-110 duration-500"
+                className="transform group-hover:scale-105 duration-300"
               />
             </ThemeAnchorText>
           </li>

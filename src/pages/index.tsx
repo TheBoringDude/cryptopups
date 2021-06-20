@@ -105,8 +105,6 @@ export default function Home({ event }: HomeProps) {
 
       <SocialSection />
 
-      <hr />
-
       <Container layouts="w-4/5" className="my-20 text-center">
         <h2 className="text-4xl lg:text-5xl font-black tracking-wide text-coolGray-700 dark:text-gray-100">
           Pups Picker!
