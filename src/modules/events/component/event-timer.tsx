@@ -36,3 +36,5 @@ const EventTimer = ({ className, date }: EventTimerProps) => {
 };
 
 export default EventTimer;
+// timer::
+// https://www.digitalocean.com/community/tutorials/react-countdown-timer-react-hooks

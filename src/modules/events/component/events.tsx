@@ -15,14 +15,16 @@ const EventsSection = ({ event }: EventsSectionProps) => {
     <Link href={`/events/${event.slug}`}>
       <a>
         <section
-          className={`${pupmode.button.base} ${pupmode.button.hover} flex flex-col md:flex-row items-center justify-between w-full p-2`}
+          className={`bg-gray-700 hover:bg-gray-800 flex flex-col md:flex-row items-center justify-between w-full p-2`}
         >
           <div className="flex items-center">
             <Image src={event.image} height={45} width={80} className="object-cover" />
-            <p className="text-white ml-4 font-bold tracking-wider font-alt">{event.event_title}</p>
+            <p className="text-gray-100 ml-4 font-bold tracking-wider font-alt">
+              {event.event_title}
+            </p>
           </div>
           <EventTimer
-            className="text-2xl font-extrabold tracking-wider text-white mt-4 md:mt-0"
+            className={`${pupmode.text} text-2xl font-extrabold tracking-wider mt-4 md:mt-0`}
             date={event?.date}
           />
         </section>
@@ -32,6 +34,3 @@ const EventsSection = ({ event }: EventsSectionProps) => {
 };
 
 export { EventsSection };
-
-// timer::
-// https://www.digitalocean.com/community/tutorials/react-countdown-timer-react-hooks
