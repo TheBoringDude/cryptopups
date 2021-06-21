@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { PupsThemeContext } from '@lib/pupsThemeContext';
+import { useHasMounted } from '@lib/useHasMounted';
 
 type PupsModeColors = 'blue' | 'green' | 'purple' | 'white' | 'yellow' | 'orange' | 'rose';
 
@@ -111,6 +112,9 @@ const usePupsTheme = () => {
 };
 
 const usePupsColor = (): SlidePupColorProps => {
+  const mounted = useHasMounted();
+  if (!mounted) return;
+  
   const { pupmode } = usePupsTheme();
 
   return SlideColorsContext[pupmode];
