@@ -57,10 +57,10 @@ const EventsManager = (props: EventsManagerProps) => {
   return (
     <EventLayout event={props.event} onGoingEvent={props.onGoingEvent}>
       <NextSeo
-        title={props.event.event_title}
+        title={props.event.title}
         description={props.event.content}
         openGraph={{
-          title: props.event.event_title,
+          title: props.event.title,
           description: props.event.content
         }}
       />
