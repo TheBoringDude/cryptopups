@@ -15,7 +15,7 @@ export const PupShow = () => {
     <div className="flex items-center justify-center">
       <ul className="flex flex-col mr-10">
         {/* map over the object theme in here */}
-        {Object.entries(SlideColorsContext).map(([_, color], index) => (
+        {Object.entries(SlideColorsContext).map(([, color], index) => (
           <li key={index} className="m-1">
             <button
               onClick={() => {

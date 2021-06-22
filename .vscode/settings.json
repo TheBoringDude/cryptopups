@@ -4,5 +4,8 @@
     "other": true,
     "comments": false,
     "strings": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
   }
 }

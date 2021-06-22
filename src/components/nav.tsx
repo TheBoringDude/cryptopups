@@ -22,14 +22,14 @@ export const Navigation = () => {
 
         <ul className="mt-6 md:mt-0 inline-flex items-center text-coolGray-700 dark:text-white font-alt">
           <li className="mx-3 sm:ml-8">
-            <a className={`tracking-wider ${pupmode?.linkHover}`} href="/archive">
-              Gallery
-            </a>
+            <Link href="/archive">
+              <a className={`tracking-wider ${pupmode?.linkHover}`}>Gallery</a>
+            </Link>
           </li>
           <li className="mx-3 sm:ml-8">
-            <a className={`tracking-wider ${pupmode?.linkHover}`} href="/blog">
-              Blog
-            </a>
+            <Link href="/blog">
+              <a className={`tracking-wider ${pupmode?.linkHover}`}>Blog</a>
+            </Link>
           </li>
           <li className="mx-3 sm:ml-8">
             <BuyNowBtn />

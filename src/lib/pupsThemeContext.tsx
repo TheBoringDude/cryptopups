@@ -52,7 +52,7 @@ const PupsProvider = ({ children }: PupsThemeContextProps) => {
     const mode = window.localStorage.getItem('pupmode');
     setPupmode(mode ? mode : 'rose');
     setClassTHeme(theme);
-  }, []);
+  }, [theme]);
 
   const toggle = (mode: string) => {
     setPupmode(mode);

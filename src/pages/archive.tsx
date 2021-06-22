@@ -1,10 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
+import { GetStaticProps } from 'next';
+import { NextSeo } from 'next-seo';
+
 import { ArchiveTabHandler } from '@modules/archive/component/tabs';
 import { Container } from '@components/container';
 import { BaseLayout } from '@layouts/base';
 import { getLatestEvent } from '@modules/events/events';
 import { EventProps } from '@modules/events/types';
-import { GetStaticProps } from 'next';
-import { NextSeo } from 'next-seo';
 
 export const getStaticProps: GetStaticProps = async () => {
   const event = getLatestEvent();
@@ -54,7 +56,7 @@ const ArchivePage = ({ event }: ArchiveProps) => {
             by{' '}
             <a
               className="hover:underline font-bold"
-              rel="cc:attributionURL dct:creator"
+              rel="noreferrer cc:attributionURL dct:creator"
               target="_blank"
               property="cc:attributionName"
               href="https://www.instagram.com/apppllleee_pie/"
