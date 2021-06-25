@@ -1,5 +1,4 @@
 import { EventProps } from '../types';
-import { usePupsColor } from '../../theme/theme';
 import Image from 'next/image';
 import Link from 'next/link';
 import EventTimer from './event-timer';
