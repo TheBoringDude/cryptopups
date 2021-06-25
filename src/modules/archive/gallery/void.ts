@@ -1,4 +1,4 @@
-import { ImagePupsNestedProps, ImagePupsProps } from './gallery';
+import { ImagePupsNestedProps } from './gallery';
 
 export const VoidPups: ImagePupsNestedProps = {
   normal: [

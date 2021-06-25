@@ -1,6 +1,6 @@
-import { useTheme } from './theme';
-import { useEffect, useState } from 'react';
+import { useHasMounted } from '@lib/useHasMounted';
 import { ThemeButton } from './buttons';
+import { useTheme } from './theme';
 
 const SunIcon = () => {
   return (
@@ -40,11 +40,7 @@ const MoonIcon = () => {
 };
 
 export const ToggleThemeButton = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  });
+  const mounted = useHasMounted();
 
   const { theme, toggleTheme } = useTheme();
 

@@ -1,11 +1,12 @@
-import { useContext } from 'react';
 import { PupsThemeContext } from '@lib/pupsThemeContext';
 import { useHasMounted } from '@lib/useHasMounted';
+import { useContext } from 'react';
 
 type PupsModeColors = 'blue' | 'green' | 'purple' | 'white' | 'yellow' | 'orange' | 'rose';
 
 type SlidePupColorProps = {
   color: string;
+  border: string;
   text: string;
   linkHover: string;
   textHover: string;
@@ -23,6 +24,7 @@ type SlideMap = { [key: string]: SlidePupColorProps };
 const SlideColorsContext: SlideMap = {
   blue: {
     color: 'bg-blue-500',
+    border: 'border-blue-500',
     text: 'text-blue-500',
     linkHover: 'hover:text-blue-500',
     textHover: 'hover:text-blue-600',
@@ -36,6 +38,7 @@ const SlideColorsContext: SlideMap = {
   },
   green: {
     color: 'bg-green-500',
+    border: 'border-green-500',
     text: 'text-green-500',
     linkHover: 'hover:text-green-500',
     textHover: 'hover:text-green-600',
@@ -49,6 +52,7 @@ const SlideColorsContext: SlideMap = {
   },
   purple: {
     color: 'bg-purple-500',
+    border: 'border-purple-500',
     text: 'text-purple-500',
     linkHover: 'hover:text-purple-500',
     textHover: 'hover:text-purple-600',
@@ -62,6 +66,7 @@ const SlideColorsContext: SlideMap = {
   },
   yellow: {
     color: 'bg-yellow-500',
+    border: 'border-yellow-500',
     text: 'text-yellow-500',
     linkHover: 'hover:text-yellow-500',
     textHover: 'hover:text-yellow-600',
@@ -75,6 +80,7 @@ const SlideColorsContext: SlideMap = {
   },
   orange: {
     color: 'bg-orange-500',
+    border: 'border-orange-500',
     text: 'text-orange-500',
     linkHover: 'hover:text-orange-500',
     textHover: 'hover:text-orange-600',
@@ -88,6 +94,7 @@ const SlideColorsContext: SlideMap = {
   },
   rose: {
     color: 'bg-rose-500',
+    border: 'border-rose-500',
     text: 'text-rose-500',
     linkHover: 'hover:text-rose-500',
     textHover: 'hover:text-rose-600',
@@ -113,9 +120,9 @@ const usePupsTheme = () => {
 
 const usePupsColor = (): SlidePupColorProps => {
   const mounted = useHasMounted();
-  if (!mounted) return;
-  
   const { pupmode } = usePupsTheme();
+
+  if (!mounted) return;
 
   return SlideColorsContext[pupmode];
 };

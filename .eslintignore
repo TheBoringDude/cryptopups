@@ -5,3 +5,5 @@ _events
 .vercel
 .vscode
 node_modules
+
+tailwind.config.js
