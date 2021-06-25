@@ -55,7 +55,7 @@ export const ArchiveGallery = ({ set }: ArchiveGalleryProps) => {
               {image.rarity}
             </span>
             <Image
-              className="relative rounded-xl z-10"
+              className="rounded-xl z-10"
               objectFit="cover"
               src={image.src}
               alt={image.name}
