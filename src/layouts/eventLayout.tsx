@@ -13,7 +13,8 @@ export const EventLayout = ({ children, event, onGoingEvent }: EventLayoutProps)
   return (
     <DefaultLayout>
       {event.slug !== onGoingEvent.slug && <EventsSection event={onGoingEvent} />}
-      <div className="bg-coolGray-900">{children}</div>
+
+      <div className="dark:bg-gray-900 bg-gray-50">{children}</div>
     </DefaultLayout>
   );
 };

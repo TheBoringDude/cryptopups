@@ -12,7 +12,10 @@ export const EventCommon = ({ event, content }: EventCommonProps) => {
   return (
     <div className="p-10">
       <Link href="/">
-        <a className="tracking-wide text-white hover:underline" title="Return To Home">
+        <a
+          className="tracking-wide text-gray-700 dark:text-white hover:underline"
+          title="Return To Home"
+        >
           Return Home
         </a>
       </Link>
@@ -21,7 +24,7 @@ export const EventCommon = ({ event, content }: EventCommonProps) => {
         className="font-extrabold text-3xl xs:text-4xl md:text-5xl xl:text-6xl tracking-wider text-neonBlue text-center mt-4"
       />
       {/* end timer */}
-      <div className="dark:bg-coolGray-700 bg-gray-100 p-4 rounded-lg my-12 w-11/12 sm:w-5/6 md:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto">
+      <div className="bg-white dark:bg-gray-200 shadow-2xl border px-8 rounded-md my-12 max-w-2xl mx-auto">
         <div className="text-center">
           <MarkdownRenderContent content={content} />
         </div>
