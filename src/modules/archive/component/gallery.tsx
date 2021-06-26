@@ -14,29 +14,35 @@ type GalleryRarityColorsProps = {
   [key in ImageRatings]: {
     bg: string;
     border: string; // could be useful in the future
+    placeholder: string;
   };
 };
 
 const GalleryRarityColors: GalleryRarityColorsProps = {
   rare: {
     bg: 'bg-blue-500',
-    border: 'border-blue-500'
+    border: 'border-blue-500',
+    placeholder: 'bg-blue-100'
   },
   mythic: {
     bg: 'bg-violet-500',
-    border: 'border-violet-500'
+    border: 'border-violet-500',
+    placeholder: 'bg-violet-100'
   },
   cosmic: {
     bg: 'bg-red-500',
-    border: 'border-red-500'
+    border: 'border-red-500',
+    placeholder: 'bg-red-100'
   },
   ethereal: {
     bg: 'bg-orange-500',
-    border: 'border-orange-500'
+    border: 'border-orange-500',
+    placeholder: 'bg-orange-100'
   },
   special: {
     bg: 'bg-blueGray-800',
-    border: 'border-blueGray-800'
+    border: 'border-blueGray-800',
+    placeholder: 'bg-blueGray-100'
   }
 };
 
@@ -54,14 +60,23 @@ export const ArchiveGallery = ({ set }: ArchiveGalleryProps) => {
             >
               {image.rarity}
             </span>
-            <Image
-              className="rounded-xl z-10"
-              objectFit="cover"
-              src={image.src}
-              alt={image.name}
-              height={400}
-              width={400}
-            />
+            <div className="relative flex items-center">
+              {/* a simple placeholder background */}
+              <div
+                className={`rounded-xl absolute animate-pulse w-full h-full ${
+                  GalleryRarityColors[image.rarity].placeholder
+                }`}
+              />
+
+              <Image
+                className="rounded-xl z-10 relative"
+                objectFit="cover"
+                src={image.src}
+                alt={image.name}
+                height={400}
+                width={400}
+              />
+            </div>
           </div>
         ))}
       </section>

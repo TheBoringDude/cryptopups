@@ -5,19 +5,18 @@
 import { Container } from '@components/container';
 import { PupShow } from '@components/pupshow';
 import { SocialSection } from '@components/social';
-import { ThemeAnchorButton } from '@modules/theme/anchor';
+import { faImages } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BaseLayout } from '@layouts/base';
 import { getLatestEvent } from '@modules/events/events';
 import { EventProps } from '@modules/events/types';
-import { GetStaticProps } from 'next';
+import { ThemeAnchorButton } from '@modules/theme/anchor';
+import { usePupsColor } from '@modules/theme/theme';
 import { TELEGRAM_LINK } from '@utils/socialMedia';
+import { GetStaticProps } from 'next';
+import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faImages } from '@fortawesome/free-solid-svg-icons';
-import { NextSeo } from 'next-seo';
-import { usePupsColor } from '@modules/theme/theme';
-
 import featuredImage from '../../public/images/featured-white.png';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -55,7 +54,7 @@ export default function Home({ event }: HomeProps) {
             <h1 className="text-3xl xs:text-4xl md:text-5xl xl:text-6xl font-black text-coolGray-700 dark:text-white">
               Welcome to
               <span
-                className={`block mt-8 text-5xl xs:text-6xl md:text-7xl xl:text-8xl underline tracking-tight font-cursive ${
+                className={`animate-bounce block mt-12 text-5xl xs:text-6xl md:text-7xl xl:text-8xl underline tracking-tight font-cursive ${
                   pupmode?.text && pupmode.text
                 }`}
               >
