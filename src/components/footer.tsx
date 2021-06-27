@@ -2,11 +2,10 @@
   Main footer section.
 */
 
+import { ToggleThemeButton } from '@modules/theme/toggle-theme';
 import Image from 'next/image';
 import Link from 'next/link';
-
 import { Container } from './container';
-import { ToggleThemeButton } from '@modules/theme/toggle-theme';
 
 export const Footer = () => {
   return (
