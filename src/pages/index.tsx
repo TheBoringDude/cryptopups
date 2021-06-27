@@ -54,7 +54,7 @@ export default function Home({ event }: HomeProps) {
             <h1 className="text-3xl xs:text-4xl md:text-5xl xl:text-6xl font-black text-coolGray-700 dark:text-white">
               Welcome to
               <span
-                className={`animate-bounce block mt-12 text-5xl xs:text-6xl md:text-7xl xl:text-8xl underline tracking-tight font-cursive ${
+                className={`block mt-10 mb-4 text-5xl xs:text-6xl md:text-7xl xl:text-8xl underline tracking-tight font-cursive ${
                   pupmode?.text && pupmode.text
                 }`}
               >
