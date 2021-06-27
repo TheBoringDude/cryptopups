@@ -40,7 +40,7 @@ export const BaseLayout = ({ children, event }: BaseLayoutProps) => {
           type="button"
           title="Return To Top"
           onClick={scrollToTop}
-          className="fixed z-50 text-white bottom-12 right-3 bg-white/5 hover:bg-white/20 p-2 animate-bounce hover:animate-none"
+          className="fixed z-50 text-gray-500 dark:text-gray-100 bottom-12 right-3 bg-black/10 hover:bg-black/25 dark:bg-white/5 dark:hover:bg-white/20 p-2 animate-bounce hover:animate-none"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -15,7 +15,7 @@ export const Navigation = () => {
     <Container>
       <nav className="py-4 flex flex-col sm:flex-row items-center justify-between">
         <Link href="/">
-          <a>
+          <a title="World of CryptoPups">
             <Image alt="World of CryptoPups Logo" src="/logo.png" height={30} width={140} />
           </a>
         </Link>
@@ -23,12 +23,16 @@ export const Navigation = () => {
         <ul className="mt-6 md:mt-0 inline-flex items-center text-coolGray-700 dark:text-white font-alt">
           <li className="mx-3 sm:ml-8">
             <Link href="/archive">
-              <a className={`tracking-wider ${pupmode?.linkHover}`}>Gallery</a>
+              <a title="Visit Gallery" className={`tracking-wider ${pupmode?.linkHover}`}>
+                Gallery
+              </a>
             </Link>
           </li>
           <li className="mx-3 sm:ml-8">
             <Link href="/blog">
-              <a className={`tracking-wider ${pupmode?.linkHover}`}>Blog</a>
+              <a title="Visit Blog" className={`tracking-wider ${pupmode?.linkHover}`}>
+                Blog
+              </a>
             </Link>
           </li>
           <li className="mx-3 sm:ml-8">
