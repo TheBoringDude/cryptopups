@@ -1,12 +1,11 @@
-import Image from 'next/image';
-
 import { SlideColorsContext, usePupsTheme } from '@modules/theme/theme';
+import Image from 'next/image';
 import blue from '../../public/images/featured/blue.png';
 import green from '../../public/images/featured/green.png';
-import yellow from '../../public/images/featured/yellow.png';
 import orange from '../../public/images/featured/orange.png';
 import purple from '../../public/images/featured/purple.png';
 import rose from '../../public/images/featured/rose.png';
+import yellow from '../../public/images/featured/yellow.png';
 
 export const PupShow = () => {
   const { pupmode, togglePupMode } = usePupsTheme();
@@ -21,7 +20,7 @@ export const PupShow = () => {
               onClick={() => {
                 togglePupMode(color.name);
               }}
-              className={`p-3 lg:p-5 rounded-md ${color.color} ${
+              className={`p-3 sm:p-4 lg:p-5 rounded-md ${color.color} ${
                 color.name === pupmode ? 'rounded-full' : ''
               }`}
               title={color.name}

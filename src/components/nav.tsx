@@ -13,14 +13,14 @@ export const Navigation = () => {
 
   return (
     <Container>
-      <nav className="py-4 flex flex-col sm:flex-row items-center justify-between">
+      <nav className="py-4 flex flex-col xs:flex-row items-center justify-between">
         <Link href="/">
           <a title="World of CryptoPups">
             <Image alt="World of CryptoPups Logo" src="/logo.png" height={30} width={140} />
           </a>
         </Link>
 
-        <ul className="mt-6 md:mt-0 inline-flex items-center text-coolGray-700 dark:text-white font-alt">
+        <ul className="mt-6 xs:mt-0 inline-flex items-center text-coolGray-700 dark:text-white font-alt">
           <li className="mx-3 sm:ml-8">
             <Link href="/archive">
               <a title="Visit Gallery" className={`tracking-wider ${pupmode?.linkHover}`}>

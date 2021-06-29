@@ -51,17 +51,17 @@ export default function Home({ event }: HomeProps) {
       <Container className="py-20 px-4 lg:px-8">
         <section className="text-center">
           <div className="w-11/12 sm:w-5/6 lg:w-4/5 xl:w-3/4 mx-auto">
-            <h1 className="text-3xl xs:text-4xl md:text-5xl xl:text-6xl font-black text-coolGray-700 dark:text-white">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-black text-coolGray-700 dark:text-white">
               Welcome to
               <span
-                className={`block mt-10 mb-4 text-5xl xs:text-6xl md:text-7xl xl:text-8xl underline tracking-tight font-cursive ${
+                className={`block mt-6 md:mt-10 mb-4 text-5xl sm:text-7xl xl:text-8xl underline tracking-tight font-cursive ${
                   pupmode?.text && pupmode.text
                 }`}
               >
                 World of CryptoPups
               </span>
             </h1>
-            <p className="text-2xl lg:text-3xl tracking-wide mt-2 text-coolGray-500 dark:text-gray-100">
+            <p className="text-xl sm:text-2xl lg:text-3xl tracking-wide mt-2 text-coolGray-500 dark:text-gray-100">
               Where cute, cool, beautiful, stunning and amazingly crafted puppies reside,{' '}
               <span className="font-black">`pups`</span> all the way to the moon!
             </p>
